@@ -9,10 +9,10 @@ function App() {
       <Header />
      <p>hola</p>
      <Switch>
-        <Route path="/" exact component={Home} />
+        {/* <Route path="/" exact component={Home} />
         <Route path="/about" component={About} />
         <Route path="/contact" component={Contact} />
-        <Route path='/notas' component={Notas} />
+        <Route path='/notas' component={Notas} /> */}
       </Switch>
       <Footer />
     </div>
