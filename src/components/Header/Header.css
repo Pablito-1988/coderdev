@@ -1,0 +1,37 @@
+.divBcg{
+    background-image: linear-gradient(to bottom,  black,rgba(255, 0, 0, 0));
+    position: absolute;
+    z-index: 2;
+    width:100%;
+}
+
+.logoImg{
+    width:3rem
+}
+
+nav {
+  padding: 5px 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.menuBar {
+  list-style-type: none;
+  overflow: hidden;
+  text-align: center;
+  background: #000000;
+  width: fit-content;
+  padding-inline-start: 0;
+}
+.menuBar li {
+  font-size: 1.2rem;
+  padding: 0.2rem 0.7rem;
+  display: inline-block;
+  text-align: center;
+}
+.menuBar li a {
+  text-decoration: none;
+  color: #ffffff;
+  text-transform: uppercase;
+  font-weight: 900;
+}
