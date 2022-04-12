@@ -1,0 +1,45 @@
+.footer{
+    display: flex;
+    width: 100%;
+    background-color: black;
+}
+
+.footerLeft{
+    width: 33%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.footerCenter{
+    width: 33%;
+    
+}
+.footerRight{
+    width: 33%
+}
+#youtubeIcon{
+    color: red;
+    font-size: 18px
+}
+#instagramIcon{
+    color: white;
+    font-size: 18px}
+.iconContainer{
+    padding: 0;
+    display: flex;
+    gap: 5px;
+}
+li{
+    list-style: none;
+}
+i{
+    color: white;
+}
+.footerTitle{
+    margin-bottom: 0;
+    color:white
+}
+.logoImg{
+    width:3rem
+}
