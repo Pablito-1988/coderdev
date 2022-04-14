@@ -16,12 +16,12 @@ const Footer = () => {
             <ul className="iconContainer">
               <li className='linkIcon'>
                 <Link >
-                  <i class="fab fa-whatsapp"></i>
+                  <i className="fab fa-whatsapp"></i>
                 </Link>
               </li>
               <li className='linkIcon'>
                 <Link >
-                  <i class="far fa-envelope"></i>
+                  <i className="far fa-envelope"></i>
                 </Link>
               </li>
             </ul>
@@ -31,12 +31,12 @@ const Footer = () => {
             <ul className="iconContainer">
               <li className='linkIcon'>
                 <Link >
-                  <i id="instagramIcon" class="fab fa-instagram"></i>
+                  <i id="instagramIcon" className="fab fa-instagram"></i>
                 </Link>
               </li>
               <li >
                 <Link >
-                  <i id="youtubeIcon" class="fab fa-youtube"></i>
+                  <i id="youtubeIcon" className="fab fa-youtube"></i>
                 </Link>
               </li>
             </ul>
