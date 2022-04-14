@@ -15,16 +15,23 @@
     width: 33%;
     
 }
+.linkIcon{
+    width: 20px;
+    background-color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+}
 .footerRight{
     width: 33%
 }
 #youtubeIcon{
     color: red;
-    font-size: 18px
+    font-size: 1,2rem;
 }
 #instagramIcon{
-    color: white;
-    font-size: 18px}
+    color: black;
+    font-size: 1,2rem}
 .iconContainer{
     padding: 0;
     display: flex;

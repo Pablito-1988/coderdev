@@ -14,13 +14,13 @@ const Footer = () => {
           <div className="footerCenter">
             <h3 className="footerTitle">Contacto</h3>
             <ul className="iconContainer">
-              <li>
-                <Link>
+              <li className='linkIcon'>
+                <Link >
                   <i class="fab fa-whatsapp"></i>
                 </Link>
               </li>
-              <li>
-                <Link>
+              <li className='linkIcon'>
+                <Link >
                   <i class="far fa-envelope"></i>
                 </Link>
               </li>
@@ -29,13 +29,13 @@ const Footer = () => {
           <div className="footerRight">
             <h3 className="footerTitle">Redes</h3>
             <ul className="iconContainer">
-              <li>
-                <Link>
+              <li className='linkIcon'>
+                <Link >
                   <i id="instagramIcon" class="fab fa-instagram"></i>
                 </Link>
               </li>
-              <li>
-                <Link>
+              <li >
+                <Link >
                   <i id="youtubeIcon" class="fab fa-youtube"></i>
                 </Link>
               </li>
