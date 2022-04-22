@@ -34,13 +34,13 @@
   .dot {
     width: 20px;
     height: 20px;
-    border-radius: 50%;
+    border-radius: 25%;
     border: 3px solid #f1f1f1;
     margin: 0 5px;
-    background: #f1f1f1;
+    background: black;
   }
   .dot.active {
-    background: rgb(32, 32, 32);
+    background: #CD9E45
   }
   .slide {
     width: 100%;

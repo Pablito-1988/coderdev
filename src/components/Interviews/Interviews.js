@@ -10,7 +10,7 @@ const Interviews = () => {
   return (
     <>
       <div className="interviewsContainer">
-        <h3>Entrevistas</h3>
+        <h3 className='interviewsTitle'>ENTREVISTAS</h3>
         <div className="intereviewsWrapper">
           {interviews.map((interview) => (
             <Interview name={interview.name} date={interview.date} />
