@@ -1,0 +1,11 @@
+.banner{
+    display: flex;
+    align-items: center;
+    justify-content: center;   
+}
+.logoBanner{
+    width: 20%;
+}
+.logoBannerImg{
+    width: 100%;
+}

@@ -3,9 +3,9 @@ import Interview from "./Interview";
 
 const Interviews = () => {
   const interviews = [
-    { name: "Lucas Romero", date: "04 de Agosto" },
-    { name: "Lucas Romero", date: "05 de Agosto" },
-    { name: "Lucas Romero", date: "06 de Agosto" },
+    { firstName: "Lucas", lastName: "Romero", date: "04 de Agosto 2022" },
+    { firstName: "Lucas", lastName: "Romero", date: "05 de Agosto 2022" },
+    { firstName: "Lucas", lastName: "Romero", date: "06 de Agosto 2022" },
   ];
   return (
     <>
@@ -13,7 +13,7 @@ const Interviews = () => {
         <h3 className='interviewsTitle'>ENTREVISTAS</h3>
         <div className="intereviewsWrapper">
           {interviews.map((interview) => (
-            <Interview name={interview.name} date={interview.date} />
+            <Interview firstName={interview.firstName} lastName={interview.lastName} date={interview.date} />
           ))}
         </div>
       </div>

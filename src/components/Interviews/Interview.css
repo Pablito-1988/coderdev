@@ -29,8 +29,18 @@
     display: flex;
     justify-content: space-around;
     width: 100%;
-    border-bottom: 1px solid #CD9E45
-
+    border-bottom: 1px solid #CD9E45;
+    align-items: center;
+}
+.figtherName{
+    display: flex;
+    gap: 5px;
+}
+.interviewLastname{
+    color:red
+}
+.interviewDate{
+    font-size: 12px;
 }
 #figtherIcon{
     color: red;

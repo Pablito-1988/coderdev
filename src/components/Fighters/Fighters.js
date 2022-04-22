@@ -45,10 +45,10 @@ const Fighters = () => {
               <p className="fighterLastname">{fighter.lastname}</p>
             </div>
             <div className="fighterSocialMedia">
-              <a href={fighter.twitter}>
+              <a href={fighter.twitter} target='_blank'>
                 <i id='socialMedia' class="fab fa-twitter"></i>
               </a>
-              <a href={fighter.instagram}>
+              <a href={fighter.instagram} target='_blank'>
                 <i id='socialMedia' class="fab fa-instagram"></i>
               </a>
             </div>
