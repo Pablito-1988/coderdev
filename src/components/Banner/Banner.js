@@ -9,7 +9,7 @@ const Banner = () => {
       <div className="banner">
         {logos.map((logo) => (
             <div className="logoBanner">
-                <img className='logoBanner' src={logo.logoBanner} alt="Jenny Panichi" className="logoBannerImg" />
+                <img  src={logo.logoBanner} alt="Jenny Panichi" className="logoBannerImg" />
             </div>
         ))}     
       </div>

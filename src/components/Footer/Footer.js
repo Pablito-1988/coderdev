@@ -34,7 +34,7 @@ const Footer = () => {
                   <i id="instagramIcon" className="fab fa-instagram"></i>
                 </Link>
               </li>
-              <li >
+              <li className='linkIcon' >
                 <Link >
                   <i id="youtubeIcon" className="fab fa-youtube"></i>
                 </Link>
