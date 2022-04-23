@@ -1,0 +1,31 @@
+.dropdown + .link:focus{
+    color: black;
+}
+
+.dropdown{
+    position: relative;
+    /* display: inline-block; */
+}
+
+.dropdown-menu{
+    position: absolute;
+    display:inline-grid;
+    left:0;
+    top: calc(100% + .5rem);
+    background-color: white;
+    padding: .75rem;
+    border-radius: .25rem;
+    box-shadow: 0 .125rem .25rem rgba(0,0,0,.1);
+    opacity: 0;
+    pointer-events:none;
+    transform: translateY(-10px);
+    transition: opacity 150ms ease-in-out, transform 150ms ease-in-out;
+}
+
+.dropdown > .link:focus + .dropdown-menu{
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events:auto;
+}
+
+/* .dropdown-menu.active{}  */

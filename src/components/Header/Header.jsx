@@ -1,33 +1,56 @@
 import React from "react";
+import { useEffect } from "react";
 import "./Header.css";
 import MainLogo from "../../assets/img/diamond.png";
+import Dropdown from "../Dropdown/Dropdown";
+import { useTranslation } from "react-i18next";
+import i18next from "i18next";
 import { Link } from "react-router-dom";
 
 const Header = () => {
-  const menu = [
-    { name: "Entrevistas", ref: "/entrevistas", id: "1" },
-    { name: "Peleadores", ref: "/peleadores", id: "2" },
-    { name: "Calendario", ref: "/calendario", id: "3" },
-    { name: "Quien Soy", ref: "/about", id: "4" },
-    { name: "Contacto", ref: "/contacto", id: "5" },
-  ];
+  const {t} = useTranslation(["header"]);
+
+  useEffect(() => {
+		if (localStorage.getItem("i18nextLng")?.length > 2) {
+			i18next.changeLanguage("es");
+		}
+	}, []);
 
   return (
     <div className="divBcg">
-      <div>
-        <img src={MainLogo} alt="Jenny Panichi" className="logoImg"/>
+      <div className="topDivHeader">
+        <div id="leftbox">
+          <Link to="/">
+            <img src={MainLogo} alt="Jenny Panichi" className="logoImg" />
+          </Link>
+        </div>
+        <div id="middlebox">
+          <img src={MainLogo} alt="Jenny Panichi" className="logoImg" />
+        </div>
+        <div id="rightbox">
+          <Dropdown/>
+        </div>
       </div>
-    <nav>
-      <ul className="menuBar">
-        {menu.map((menuItem) => {
-          return (
-            <li key={menuItem.id} className="menuItem">
-              <Link to={menuItem.ref}>{menuItem.name}</Link>
-            </li>
-          );
-        })}
-      </ul>
-    </nav>
+      <nav>
+        <ul className="menuBar">
+          
+              <li key={t("entrevistas.nombre")} className="menuItem">
+                <Link to={t("entrevistas.ref")}>{t("entrevistas.nombre")}</Link>
+              </li>
+              <li key={t("peleadores.nombre")} className="menuItem">
+                <Link to={t("peleadores.ref")}>{t("peleadores.nombre")}</Link>
+              </li>
+              <li key={t("calendario.nombre")} className="menuItem">
+                <Link to={t("calendario.ref")}>{t("calendario.nombre")}</Link>
+              </li>
+              <li key={t("quiensoy.nombre")} className="menuItem">
+                <Link to={t("quiensoy.ref")}>{t("quiensoy.nombre")}</Link>
+              </li>
+              <li key={t("contacto.nombre")} className="menuItem">
+                <Link to={t("contacto.ref")}>{t("contacto.nombre")}</Link>
+              </li>
+        </ul>
+      </nav>
     </div>
   );
 };

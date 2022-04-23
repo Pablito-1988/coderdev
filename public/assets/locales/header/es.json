@@ -1,0 +1,8 @@
+{
+  "language": "Español",
+  "entrevistas": { "nombre": "Entrevistas", "ref": "/entrevistas" },
+  "peleadores": { "nombre": "Peleadores", "ref": "/peleadores" },
+  "calendario": { "nombre": "Calendario", "ref": "/calendario" },
+  "quiensoy": { "nombre": "Quien soy", "ref": "/about" },
+  "contacto": { "nombre": "Contacto", "ref": "/contacto" }
+}

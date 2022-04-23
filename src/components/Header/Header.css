@@ -1,12 +1,48 @@
 .divBcg{
-    background-image: linear-gradient(to bottom,  black,rgba(255, 0, 0, 0));
+    /* background-image: linear-gradient(to bottom,  red 70%,rgba(255, 0, 0, 0)); */
+    /* background-image: linear-gradient(to bottom, rgba(255,0,0,0), rgba(0, 0, 0, 0.6)); */
+    background: linear-gradient(0deg, rgba(12,3,16,0) 50%, rgba(12,3,16,1) 100%);
     position: absolute;
     z-index: 2;
     width:100%;
+    padding-bottom: 30px;
+}
+
+.topDivHeader{
+  display: flex;
+  justify-content: center;
+}
+
+#leftbox {
+  float:left; 
+  width:25%;
+  /* height:280px; */
+}
+#middlebox{
+  float:center; 
+  width:50%;
+  /* height:280px; */
+}
+#rightbox{
+  float:right;
+  width:25%;
+  /* height:280px; */
 }
 
 .logoImg{
-    width:3rem
+    width:3rem;
+    float: left;
+}
+
+.logoIdioma{
+  width:1.5rem;
+  float: left;
+}
+
+.textIdioma{
+  font-size:1.5rem;
+  color:#ffffff;
+  font-weight:400;
 }
 
 nav {

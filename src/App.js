@@ -3,12 +3,13 @@ import Footer from './components/Footer/Footer';
 import Home from './components/Home/Home';
 import './App.css';
 import {Switch, Route} from 'react-router-dom';
+import { Suspense } from "react";
 
 function App() {
   return (
     <div >
+      <Suspense fallback={null}>
       <Header />
-     
      <Switch>
          <Route path="/" exact component={Home} />
         {/* <Route path="/about" component={About} />
@@ -16,6 +17,7 @@ function App() {
         <Route path='/notas' component={Notas} />  */}
       </Switch>
       <Footer />
+      </Suspense>
     </div>
   );
 }
