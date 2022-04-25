@@ -1,5 +1,5 @@
 import React from "react";
-import "./Dropdown.css";
+import "../Dropdown/Dropdown.css";
 import "flag-icons";
 import { useTranslation } from "react-i18next";
 
@@ -11,20 +11,22 @@ const Dropdown = () => {
   };
 
   return (
-    <div className="dropdown" data-dropdown>
-      <ul>
-        <li>
-          <select
-            className="textIdioma link"
-            value={localStorage.getItem("i18nextLng")}
-            onChange={handlerLanguageChange}
-          >
-            Idioma
-            <option value="es">Español</option>
-            <option value="pt">Português</option>
-          </select>
-        </li>
-      </ul>
+    <div className="paddingDropdown">
+      <div className="dropdown">
+        <select
+          className="dropdown"
+          value={localStorage.getItem("i18nextLng")}
+          onChange={handlerLanguageChange}
+        >
+          Idioma
+          <option className="dropdown-menu" value="es">
+            Español
+          </option>
+          <option className="dropdown-menu" value="pt">
+            Português
+          </option>
+        </select>
+      </div>
     </div>
   );
 };

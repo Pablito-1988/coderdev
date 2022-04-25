@@ -11,22 +11,20 @@
 .topDivHeader{
   display: flex;
   justify-content: center;
+  background-color: #000000;
 }
 
 #leftbox {
   float:left; 
   width:25%;
-  /* height:280px; */
 }
 #middlebox{
   float:center; 
   width:50%;
-  /* height:280px; */
 }
 #rightbox{
   float:right;
   width:25%;
-  /* height:280px; */
 }
 
 .logoImg{
@@ -65,9 +63,27 @@ nav {
   display: inline-block;
   text-align: center;
 }
+.hoverCircle{
+  height: .7rem;
+  width: .7rem;
+  background-color: #CD9E45;
+  border-radius: 40%;
+  display: inline-block;
+}
+
 .menuBar li a {
   text-decoration: none;
   color: #ffffff;
   text-transform: uppercase;
   font-weight: 900;
+  cursor:pointer;
 }
+
+.menuBar li a:hover {
+  color:#CD9E45;
+}
+.menuItem:hover{
+  color:#CD9E45;
+}
+
+

@@ -2,8 +2,10 @@ import React from "react";
 import "./Footer.css";
 import logo from "../../assets/img/diamond.png";
 import { Link } from "react-router-dom/cjs/react-router-dom.min";
+import { useTranslation } from "react-i18next";
 
 const Footer = () => {
+  const {t} = useTranslation(["footer"]);
   return (
     <>
       <div className="footerContainer">
@@ -12,7 +14,7 @@ const Footer = () => {
             <img className="logoImg" src={logo} alt="" />
           </div>
           <div className="footerCenter">
-            <h3 className="footerTitle">Contacto</h3>
+            <h3 className="footerTitle">{t("contacto")}</h3>
             <ul className="iconContainer">
               <li className='linkIcon'>
                 <Link >
@@ -27,7 +29,7 @@ const Footer = () => {
             </ul>
           </div>
           <div className="footerRight">
-            <h3 className="footerTitle">Redes</h3>
+            <h3 className="footerTitle">{t("redes")}</h3>
             <ul className="iconContainer">
               <li className='linkIcon'>
                 <Link >
