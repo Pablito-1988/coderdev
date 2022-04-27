@@ -1,5 +1,5 @@
 import React from "react";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import "./Header.css";
 import MainLogo from "../../assets/img/diamond.png";
 import Dropdown from "../Dropdown/Dropdown";
@@ -9,7 +9,6 @@ import { Link } from "react-router-dom";
 
 const Header = () => {
   const { t } = useTranslation(["header"]);
-  const [isShown, setIsShown] = useState(false);
 
   useEffect(() => {
     if (localStorage.getItem("i18nextLng")?.length > 2) {
@@ -36,11 +35,10 @@ const Header = () => {
         <nav>
           <ul className="menuBar">
             <li key={t("entrevistas.nombre")} className="menuItem">
-              <Link to={t("entrevistas.ref")} onMouseEnter={() => setIsShown(true)}>
+              <Link to={t("entrevistas.ref")}>
                 {t("entrevistas.nombre")}
                 <br></br>
-                
-                <span className="hoverCircle"></span>
+                {/* <span className="hoverCircle"></span> */}
               </Link>
             </li>
             <li key={t("peleadores.nombre")} className="menuItem">
