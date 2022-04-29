@@ -76,6 +76,9 @@
     .sliderContainer{
         margin-top: 50%;
     }
+    .container-dots{
+        top: 60%;
+    }
     .dot{
         width: 10px;
         height: 10px;
