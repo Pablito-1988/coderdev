@@ -6,6 +6,7 @@
     padding: 0;
     overflow: hidden;
     background-color: black;
+    
      
 }
 .slider ul{
@@ -71,5 +72,13 @@
         top: 85%;
     }
 }
-    
+@media (max-width: 768px){
+    .sliderContainer{
+        margin-top: 50%;
+    }
+    .dot{
+        width: 10px;
+        height: 10px;
+    }
+}  
 

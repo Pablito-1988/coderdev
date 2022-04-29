@@ -49,6 +49,8 @@ const Slider = () => {
           </ul>
         </div>
       </div>
+      
+      
     </>
   );
 };
