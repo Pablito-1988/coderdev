@@ -1,8 +1,10 @@
 import React from "react";
 import "./Fighters.css";
 import Figther from "../../assets/img/ponzi.jpg";
+import { useTranslation } from "react-i18next";
 
 const Fighters = () => {
+  const {t} = useTranslation(["figthers"]);
   const fighters = [
     {
       name: "Lucas",
@@ -35,7 +37,7 @@ const Fighters = () => {
   ];
   return (
     <div className="fightersSeccion">
-      <h1 className="fighterstitle">PELEADORES</h1>
+      <h1 className="fighterstitle">{t("peleadores")}</h1>
       <div className="figthersWrapper">
         {fighters.map((fighter) => (
           <div className="fighter">
@@ -46,7 +48,7 @@ const Fighters = () => {
             </div>
             <div className="fighterSocialMedia">
               <a href={fighter.twitter} target='_blank' rel="noreferrer">
-                <i id='socialMedia' class="fab fa-twitter"></i>
+                <i id='socialMediaTwitter' class="fab fa-twitter"></i>
               </a>
               <a href={fighter.instagram} target='_blank' rel="noreferrer">
                 <i id='socialMedia' class="fab fa-instagram"></i>

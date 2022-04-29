@@ -1,69 +1,84 @@
-.fightersSeccion{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    width: 100%;
-    height: 100%;
-    background-color: black;
-    padding: 0px;
-    
+.fightersSeccion {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  padding: 0px;
 }
-.fighterstitle{
-    color: #CEA24E;
-    font-size: 2rem;
-    margin-bottom: 50px;
-    margin-top: 25px;
-    font-family: 'Exo';
-    font-style: normal;
-    font-weight: 800;
-    font-size: 26px;
-    line-height: 36px;
-    font-variant: small-caps;
+.fighterstitle {
+  color: #cea24e;
+  font-size: 2rem;
+  margin-bottom: 50px;
+  margin-top: 25px;
+  font-family: "Exo";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 26px;
+  line-height: 36px;
+  font-variant: small-caps;
 }
-.figthersWrapper{
-    display: flex;
-    width: 100%;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 20px;
-    margin-top: 15px;
-    margin-bottom: 10%;
+.figthersWrapper {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 15px;
+  margin-bottom: 10%;
 }
-.fighter{
-    width: 20%;
+.fighter {
+  width: 20%;
 }
-.fighterImg{
-    width: 100%;
-    border: 1px solid white;
+.fighterImg {
+  width: 100%;
+  border: 1px solid white;
 }
-.fighterFullName{
-    display: flex;
-    gap: 5px;
-    justify-content: center;
+.fighterFullName {
+  display: flex;
+  gap: 5px;
+  justify-content: center;
 }
-.fighterName{
-    color: white;
-    font-size: 1.5rem;
-    margin-bottom: 0;
+.fighterName {
+  color: white;
+  font-size: 1.5rem;
+  margin-bottom: 0;
 }
-.fighterLastname{
-    color: #CEA24E;
-    font-size: 1.5rem;
-    margin-bottom: 0;
+.fighterLastname {
+  color: #cea24e;
+  font-size: 1.5rem;
+  margin-bottom: 0;
 }
-.fighterSocialMedia{
-    display: flex;
-    gap: 15px;
-    justify-content: center;
-    flex-direction: column;
-    width: 100%;
-    align-items: center;
-    margin-top: 15px;
-    margin-bottom:10%;
+.fighterSocialMedia {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  margin-top: 15px;
+  margin-bottom: 10%;
 }
-#socialMedia{
-    color: white;
-    font-size: 2.5rem;
+#socialMediaTwitter {
+  color: white;
+  font-size: 2.5rem;
+}
+#socialMedia {
+  color: white;
+  font-size: 2.5rem;
+}
+#socialMediaTwitter:hover {
+  color: dodgerblue;
+}
+#socialMedia:hover {
+  color: rgba(245, 96, 64, 1) 
+}
+
+@media (max-width: 768px) {
+  .fighter {
+    width: 50%;
+  }
 }

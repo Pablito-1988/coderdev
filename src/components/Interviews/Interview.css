@@ -50,3 +50,11 @@
     /* align-content: center; */
     align-items: center;
 }
+@media (max-width: 768px) {
+    .intereviewsWrapper{
+        flex-direction: column;
+    }
+    .mainInterviewContainer{
+        width: 100%;
+    }
+  }
