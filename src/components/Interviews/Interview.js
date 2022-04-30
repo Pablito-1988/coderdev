@@ -26,7 +26,7 @@ const Interview = (props) => {
         
         <p className='interviewDate'>{date}</p>
       </div>
-      <p>
+      <p className="interviewDescription">
         Lörem ipsum dinas vidiska omuskap om mivagt. Gungar åkol det vill säga
         bonungen ett dålig. Dysnomi faktaresistens supraplastisk. Nerar pren de
         metatism ett biotion. Kontracism pesat. Pyn åtredade och nungen.
