@@ -4,5 +4,6 @@
   "peleadores": { "nombre": "Lutadores", "ref": "/lutadores" },
   "calendario": { "nombre": "Calendario", "ref": "/calendario" },
   "quiensoy": { "nombre": "Quem sou", "ref": "/about" },
-  "contacto": { "nombre": "Contato", "ref": "/contato" }
+  "contacto": { "nombre": "Contato", "ref": "/contato" },
+  "busqueda": "Procurar"
 }

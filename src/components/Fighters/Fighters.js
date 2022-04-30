@@ -48,10 +48,10 @@ const Fighters = () => {
             </div>
             <div className="fighterSocialMedia">
               <a href={fighter.twitter} target='_blank' rel="noreferrer">
-                <i id='socialMediaTwitter' class="fab fa-twitter"></i>
+                <i id='socialMediaTwitter' className="fab fa-twitter"></i>
               </a>
               <a href={fighter.instagram} target='_blank' rel="noreferrer">
-                <i id='socialMedia' class="fab fa-instagram"></i>
+                <i id='socialMedia' className="fab fa-instagram"></i>
               </a>
             </div>
           </div>

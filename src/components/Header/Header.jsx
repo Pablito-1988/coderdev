@@ -3,6 +3,7 @@ import { useEffect } from "react";
 import "./Header.css";
 import MainLogo from "../../assets/img/diamond.png";
 import Dropdown from "../Dropdown/Dropdown";
+import SearchBar from "../SearchBar/SearchBar";
 import { useTranslation } from "react-i18next";
 import i18next from "i18next";
 import { Link } from "react-router-dom";
@@ -25,7 +26,7 @@ const Header = () => {
           </Link>
         </div>
         <div id="middlebox">
-          <img src={MainLogo} alt="Jenny Panichi" className="logoImg" />
+          <SearchBar />
         </div>
         <div id="rightbox">
           <Dropdown />
