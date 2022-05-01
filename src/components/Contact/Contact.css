@@ -1,0 +1,83 @@
+.portada{
+    width: 100%
+}
+.contactMain{
+    display: flex;
+    width: 100%;
+    gap: 20px;
+    justify-content: space-evenly;
+    margin-top: 10%;
+    margin-bottom: 10%;
+}
+.formWrapper{
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    align-items: center;
+    border: 1px solid black
+}
+.formTitle{
+    color: #CD9E45;
+    background-color: black;
+    width: 100%;
+    height: 50px;
+    margin: 0;
+    /* text-align: center; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.formContainer{
+    width: 90%;
+}
+.formQuote{
+    color: red
+}
+.nameAndEmailContainer{
+    display: flex;
+    margin-bottom: 30px;
+    justify-content: space-between;
+}
+.nameInput{
+    width: 35%;
+    height: 30px;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+.emailInput{
+    width: 45%;
+    height: 30px;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+textarea{
+    width: 100%;
+    font-size: 20px;
+    height: 300px;
+    resize: none;
+}
+
+.button{
+    background-color: black;
+    color: white;
+    border: 1px solid black;
+    width: 20%;
+    height: 40px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    font-size: 20px;
+}
+.dataTitle{
+    color:red;
+    font-size: 1.5rem;
+    margin:0;
+
+}

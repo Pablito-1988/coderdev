@@ -44,9 +44,12 @@ const Interviews = () => {
       });
   }, [query]);
   
-  if (!page) {
-    return "Loading...";
-  }
+ /*  if (!page) {
+    return (
+      <>
+      <p>"Loading..."</p>
+      </>);
+  } */
   const interviews = [
     { firstName: "Lucas", lastName: "Romero", date: "04 de Agosto 2022" },
     { firstName: "Lucas", lastName: "Romero", date: "05 de Agosto 2022" },
