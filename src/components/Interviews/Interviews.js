@@ -1,6 +1,8 @@
 import React from "react";
 import Interview from "./Interview";
 import { useState, useEffect } from "react";
+import { language } from "react-i18next";
+import i18next, { use } from "i18next";
 
 const Interviews = () => {
   const accessToken = "_8rkJ8PJK5FFmNgZI7aL5tShQCi9hETu4NOK7vkwtAw";
@@ -9,7 +11,8 @@ const Interviews = () => {
   {
     entrevistaCollection{
       items{
-        titulo
+        tituloEntrevista
+        nombre
         apellido
         descripcionEntrevista
         descripcionPt
@@ -22,6 +25,13 @@ const Interviews = () => {
   }
 `;
   const [page, setPage] = useState(null);
+  const [lang, setLanguage] = useState(i18next.language);
+  
+  useEffect(() => {
+    
+    setLanguage(i18next.language);
+    console.log(setLanguage);
+  }, [lang]);
 
   useEffect(() => {
     window
@@ -38,12 +48,12 @@ const Interviews = () => {
         if (errors) {
           console.error(errors);
         } else {
-          console.log("error");
+          console.log("No errors");
         }
         setPage(data.entrevistaCollection.items);
       });
   }, [query]);
-  
+
   if (!page) {
     return "Loading...";
   }
@@ -55,12 +65,15 @@ const Interviews = () => {
         <div className="intereviewsWrapper">
           {page.map((interview) => (
             <Interview
-              firstName={interview.titulo}
+              firstName={interview.nombre}
               lastName={interview.apellido}
               date={interview.date}
-              desc={interview.descripcionEntrevista}
+              desc={
+                i18next.language === "es"
+                  ? interview.descripcionEntrevista
+                  : interview.descripcionPt
+              }
             />
-            
           ))}
         </div>
       </div>

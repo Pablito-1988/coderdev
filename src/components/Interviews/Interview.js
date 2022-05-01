@@ -1,11 +1,12 @@
 import React from "react";
 import "./Interview.css";
+import moment from 'moment';
 
 const Interview = (props) => {
   /* const name = props.name; */
   const firstName = props.firstName;
   const lastName = props.lastName;
-  const date = props.date;
+  const date = moment(props.date).format('DD/MM/YYYY');
   const descripcionEntrevista = props.desc;
 
   return (
