@@ -1,57 +1,86 @@
 import React from "react";
 import "./Fighters.css";
-import Figther from "../../assets/img/ponzi.jpg";
+import { useState, useEffect } from "react";
 import { useTranslation } from "react-i18next";
 
 const Fighters = () => {
-  const {t} = useTranslation(["figthers"]);
-  const fighters = [
-    {
-      name: "Lucas",
-      lastname: "Romero",
-      img: Figther,
-      twitter: "https://twitter.com/SPonzinibbioMMA",
-      instagram: "https://www.instagram.com/sponzinibbiomma",
-    },
-    {
-      name: "Lucas",
-      lastname: "Romero",
-      img: Figther,
-      twitter: "https://twitter.com/SPonzinibbioMMA",
-      instagram: "https://www.instagram.com/sponzinibbiomma",
-    },
-    {
-      name: "Lucas",
-      lastname: "Romero",
-      img: Figther,
-      twitter: "https://twitter.com/SPonzinibbioMMA",
-      instagram: "https://www.instagram.com/sponzinibbiomma",
-    },
-    {
-      name: "Lucas",
-      lastname: "Romero",
-      img: Figther,
-      twitter: "https://twitter.com/SPonzinibbioMMA",
-      instagram: "https://www.instagram.com/sponzinibbiomma",
-    },
-  ];
+  const { t } = useTranslation(["figthers"]);
+
+  const accessToken = process.env.REACT_APP_DELIVERY_TOKEN;
+  const spaceId = process.env.REACT_APP_SPACE_ID;
+
+  const query = `{
+    
+    peleadoresCollection{
+      items{
+        nombreCompleto
+        nombreDelPeleador
+        apellidoPeleador
+        twitter
+        instagram
+        imagenPeleador {
+          title
+          description
+          contentType
+          fileName
+          size
+          url
+          width
+          height
+        }
+        slug
+      }}
+    
+    }`;
+  const [page, setPage] = useState(null);
+
+  useEffect(() => {
+    window
+      .fetch(`https://graphql.contentful.com/content/v1/spaces/${spaceId}/`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${accessToken}`,
+        },
+        body: JSON.stringify({ query }),
+      })
+      .then((response) => response.json())
+      .then(({ data, errors }) => {
+        if (errors) {
+          console.error(errors);
+        } else {
+          console.log("No errors");
+        }
+        setPage(data.peleadoresCollection.items);
+        console.log(data.peleadoresCollection.items);
+      });
+  }, [query]);
+
+  if (!page) {
+    return "Loading...";
+  }
+
   return (
     <div className="fightersSeccion">
       <h1 className="fighterstitle">{t("peleadores")}</h1>
       <div className="figthersWrapper">
-        {fighters.map((fighter) => (
+        {page.map((fighter) => (
           <div className="fighter">
-            <img src={fighter.img} alt="Jenny Panichi" className="fighterImg" />
+            <img
+              src={fighter.imagenPeleador.url}
+              alt={fighter.imagenPeleador.title}
+              className="fighterImg"
+            />
             <div className="fighterFullName">
-              <p className="fighterName">{fighter.name}</p>
-              <p className="fighterLastname">{fighter.lastname}</p>
+              <p className="fighterName">{fighter.nombreDelPeleador}</p>
+              <p className="fighterLastname">{fighter.apellidoPeleador}</p>
             </div>
             <div className="fighterSocialMedia">
-              <a href={fighter.twitter} target='_blank' rel="noreferrer">
-                <i id='socialMediaTwitter' className="fab fa-twitter"></i>
+              <a href={fighter.twitter} target="_blank" rel="noreferrer">
+                <i id="socialMediaTwitter" className="fab fa-twitter"></i>
               </a>
-              <a href={fighter.instagram} target='_blank' rel="noreferrer">
-                <i id='socialMedia' className="fab fa-instagram"></i>
+              <a href={fighter.instagram} target="_blank" rel="noreferrer">
+                <i id="socialMedia" className="fab fa-instagram"></i>
               </a>
             </div>
           </div>

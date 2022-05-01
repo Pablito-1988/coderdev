@@ -1,14 +1,12 @@
 import React from "react";
 import Interview from "./Interview";
 import { useState, useEffect } from "react";
-import { language } from "react-i18next";
-import i18next, { use } from "i18next";
+import i18next from "i18next";
 
 const Interviews = () => {
-  const accessToken = "_8rkJ8PJK5FFmNgZI7aL5tShQCi9hETu4NOK7vkwtAw";
-  const spaceId = "0ydrshsl7jeq";
-  const query = `
-  {
+  const accessToken = process.env.REACT_APP_DELIVERY_TOKEN;
+  const spaceId = process.env.REACT_APP_SPACE_ID;
+  const query = `{
     entrevistaCollection{
       items{
         tituloEntrevista
@@ -22,16 +20,20 @@ const Interviews = () => {
         date
       }
     }
-  }
-`;
+  }`;
+
   const [page, setPage] = useState(null);
   const [lang, setLanguage] = useState(i18next.language);
-  
-  useEffect(() => {
-    
-    setLanguage(i18next.language);
-    console.log(setLanguage);
-  }, [lang]);
+  const [newLang, setNewLanguage] = useState(lang);
+
+  const description = (interview) => {
+    console.log("Soy el new language " + lang);
+    if (setNewLanguage === "es") {
+      return interview.descripcionEntrevista;
+    } else {
+      return interview.descripcionPt;
+    }
+  };
 
   useEffect(() => {
     window
@@ -68,11 +70,7 @@ const Interviews = () => {
               firstName={interview.nombre}
               lastName={interview.apellido}
               date={interview.date}
-              desc={
-                i18next.language === "es"
-                  ? interview.descripcionEntrevista
-                  : interview.descripcionPt
-              }
+              desc={description(interview)}
             />
           ))}
         </div>
