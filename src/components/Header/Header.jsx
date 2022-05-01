@@ -14,6 +14,7 @@ const Header = () => {
   useEffect(() => {
     if (localStorage.getItem("i18nextLng")?.length > 2) {
       i18next.changeLanguage("es");
+      
     }
   }, []);
 

@@ -1,27 +1,39 @@
 import React from "react";
 import Interview from "./Interview";
 import { useState, useEffect } from "react";
+import i18next from "i18next";
 
 const Interviews = () => {
-  const accessToken = "_8rkJ8PJK5FFmNgZI7aL5tShQCi9hETu4NOK7vkwtAw";
-  const spaceId = "0ydrshsl7jeq";
-  const query = `
-  {
+  const accessToken = process.env.REACT_APP_DELIVERY_TOKEN;
+  const spaceId = process.env.REACT_APP_SPACE_ID;
+  const query = `{
     entrevistaCollection{
       items{
-        titulo
+        tituloEntrevista
+        nombre
         apellido
         descripcionEntrevista
+        descripcionPt
         linkVideo
-        entrevistaCompleta
         slug
         home
         date
       }
     }
-  }
-`;
+  }`;
+
   const [page, setPage] = useState(null);
+  const [lang, setLanguage] = useState(i18next.language);
+  const [newLang, setNewLanguage] = useState(lang);
+
+  const description = (interview) => {
+    console.log("Soy el new language " + lang);
+    if (setNewLanguage === "es") {
+      return interview.descripcionEntrevista;
+    } else {
+      return interview.descripcionPt;
+    }
+  };
 
   useEffect(() => {
     window
@@ -38,36 +50,28 @@ const Interviews = () => {
         if (errors) {
           console.error(errors);
         } else {
-          console.log("error");
+          console.log("No errors");
         }
         setPage(data.entrevistaCollection.items);
       });
   }, [query]);
-  
- /*  if (!page) {
-    return (
-      <>
-      <p>"Loading..."</p>
-      </>);
-  } */
-  const interviews = [
-    { firstName: "Lucas", lastName: "Romero", date: "04 de Agosto 2022" },
-    { firstName: "Lucas", lastName: "Romero", date: "05 de Agosto 2022" },
-    { firstName: "Lucas", lastName: "Romero", date: "06 de Agosto 2022" },
-  ];
+
+  if (!page) {
+    return "Loading...";
+  }
 
   return (
     <>
       <div className="interviewsContainer">
         <h3 className="interviewsTitle">ENTREVISTAS</h3>
         <div className="intereviewsWrapper">
-          {interviews.map((interview) => (
+          {page.map((interview) => (
             <Interview
-              firstName={interview.firstName}
-              lastName={interview.lastName}
+              firstName={interview.nombre}
+              lastName={interview.apellido}
               date={interview.date}
+              desc={description(interview)}
             />
-            
           ))}
         </div>
       </div>

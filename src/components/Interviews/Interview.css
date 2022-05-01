@@ -1,64 +1,70 @@
-.interviewsContainer{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    background-color: #f5f5f5;
-    margin-top: 56%;
+.interviewsContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  background-color: #f5f5f5;
+  margin-top: 56%;
 }
-.interviewsTitle{
-    color: red;
-    font-size: 2rem;
+.interviewsTitle {
+  color: red;
+  font-size: 2rem;
+  margin-bottom: 50px;
+  margin-top: 25px;
+  font-family: "Exo";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 26px;
+  line-height: 36px;
+  font-variant: small-caps;
 }
-.intereviewsWrapper{
-    display: flex;
-    width: 100%;
-    justify-content: center;
-    margin-bottom: 4rem;
-    gap: 20px
+.intereviewsWrapper {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  margin-bottom: 4rem;
+  gap: 20px;
 }
-.mainInterviewContainer{
-    width: 30%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-   
+.mainInterviewContainer {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
-.figtherData{
-    display: flex;
-    justify-content: space-around;
-    width: 100%;
-    border-bottom: 1px solid #CD9E45;
-    align-items: center;
+.figtherData {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  border-bottom: 1px solid #cd9e45;
+  align-items: center;
 }
-.figtherName{
-    display: flex;
-    gap: 5px;
+.figtherName {
+  display: flex;
+  gap: 5px;
 }
-.interviewLastname{
-    color:red
+.interviewLastname {
+  color: red;
 }
-.interviewDate{
-    font-size: 12px;
+.interviewDate {
+  font-size: 12px;
 }
-#figtherIcon{
-    color: red;
-    font-size: 1.5rem;
-    /* text-align: justify; */
-    display: flex;
-    /* align-content: center; */
-    align-items: center;
+#figtherIcon {
+  color: red;
+  font-size: 1.5rem;
+  /* text-align: justify; */
+  display: flex;
+  /* align-content: center; */
+  align-items: center;
 }
 @media (max-width: 768px) {
-    .intereviewsWrapper{
-        flex-direction: column;
-    }
-    .mainInterviewContainer{
-        width: 100%;
-    }
-    .interviewDescription{
-        width: 90%;
-    }
+  .intereviewsWrapper {
+    flex-direction: column;
   }
-
+  .mainInterviewContainer {
+    width: 100%;
+  }
+  .interviewDescription {
+    width: 90%;
+  }
+}
