@@ -14,7 +14,8 @@
     flex-direction: column;
     width: 60%;
     align-items: center;
-    border: 1px solid black
+    border: 1px solid black;
+    border-radius: 5px;
 }
 .formTitle{
     color: #CD9E45;
@@ -80,4 +81,22 @@ textarea{
     font-size: 1.5rem;
     margin:0;
 
+}
+.modalDisplay{
+    font-size: 0px;
+    margin-top: 10px;
+    opacity: 0;
+    text-align: center;
+    animation-duration: 10s;
+    animation-name: close;
+    animation-iteration-count:1   
+}
+
+@keyframes close {
+   0%{font-size: 0px;
+opacity: 0;} 
+   50%{font-size: 20px;
+opacity: 1;}
+    100%{font-size: 0px;
+        opacity: 0;}
 }

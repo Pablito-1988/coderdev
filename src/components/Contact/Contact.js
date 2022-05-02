@@ -3,12 +3,15 @@ import portada from '../../assets/img/contact.png';
 import contactImg from '../../assets/img/contactImg.png';
 import "./Contact.css";
 import emailjs from '@emailjs/browser';
+import { useState } from 'react';
+import Modal from './Modal';
 
 const Contact = () => {
   const service = process.env.REACT_APP_SERVICE
   const template = process.env.REACT_APP_TEMPLATE
   const user = process.env.REACT_APP_USER
-  
+
+  const [showModal, setShowModal] = useState(false);
   function sendEmail(e){
     e.preventDefault();
 
@@ -19,6 +22,7 @@ emailjs.sendForm(service,template, e.target,user)
       console.log(error.text);
   });
   e.target.reset()
+  setShowModal(true)
   
  
 
@@ -32,6 +36,7 @@ emailjs.sendForm(service,template, e.target,user)
         <div className="formWrapper">
             <h2 className='formTitle'>DEJAME TU MENSAJE</h2>
             <div className="formContainer">
+            {showModal && <Modal/>}
               <p className='formQuote'>Utilice el siguiente formulario para enviarme su consulta</p>
               <form className="form"  onSubmit={sendEmail}>
                 <div className='nameAndEmailContainer'>
