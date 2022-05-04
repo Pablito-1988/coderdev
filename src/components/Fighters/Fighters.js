@@ -83,14 +83,14 @@ const Fighters = () => {
               <p className="fighterName">{fighter.nombreDelPeleador}</p>
               <p className="fighterLastname">{fighter.apellidoPeleador}</p>
             </div>
-            <div className="fighterSocialMedia">
+            {/* <div className="fighterSocialMedia">
               <a href={fighter.twitter} target="_blank" rel="noreferrer">
                 <i id="socialMediaTwitter" className="fab fa-twitter"></i>
               </a>
               <a href={fighter.instagram} target="_blank" rel="noreferrer">
                 <i id="socialMedia" className="fab fa-instagram"></i>
               </a>
-            </div>
+            </div> */}
           </div>
         ))}
       </div>

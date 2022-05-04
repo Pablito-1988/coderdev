@@ -72,11 +72,13 @@ const HomeFighters = () => {
       <div className="figthersWrapper">
         {page.filter((fighter) => (  fighter.home=== true)).map((fighter) => (
           <div className="fighter">
+              <Link to={`/peleador/${fighter.id}`}>
             <img
               src={fighter.imagenPeleador.url}
               alt={fighter.imagenPeleador.title}
               className="fighterImg"
             />
+            </Link>
             <div className="fighterFullName">
               <p className="fighterName">{fighter.nombreDelPeleador}</p>
               <p className="fighterLastname">{fighter.apellidoPeleador}</p>

@@ -35,7 +35,6 @@
 }
 .fighterImg {
   width: 100%;
-  border: 1px solid white;
 }
 .fighterFullName {
   display: flex;
@@ -87,3 +86,34 @@
   }
 }
 a{ text-decoration: none;}
+
+.fighterDetailContainer{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background-color: black;
+  padding-top: 7%;
+  /* margin-top: 6%; */
+}
+.fullNameAndAlias{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color:white
+}
+.FighterData{
+  color: white;
+}
+.fighterSocialMediaDetail {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  
+  width: 100%;
+  align-items: center;
+  margin-top: 15px;
+  margin-bottom: 10%;
+}
