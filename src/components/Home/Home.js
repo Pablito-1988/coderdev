@@ -1,13 +1,13 @@
 import React from 'react';
 import Slider from '../Slider/Slider';
 import Interviews from '../Interviews/Interviews';
-import Fighters from '../Fighters/Fighters';
+import HomeFighters from '../Fighters/HomeFighters';
 import Banner from '../Banner/Banner';
 const Home = () => {
   return <div>
     <Slider />
     <Interviews />
-    <Fighters />
+    <HomeFighters />
     <Banner />
   </div>;
 };

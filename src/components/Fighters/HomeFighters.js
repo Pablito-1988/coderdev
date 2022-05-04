@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 
-const Fighters = () => {
+const HomeFighters = () => {
   const { t } = useTranslation(["figthers"]);
 
   const accessToken = process.env.REACT_APP_DELIVERY_TOKEN;
@@ -12,7 +12,8 @@ const Fighters = () => {
 
   const query = `{
     
-    peleadoresCollection{
+    peleadoresCollection
+    {
       items{
         id
         nombreCompleto
@@ -20,6 +21,7 @@ const Fighters = () => {
         apellidoPeleador
         twitter
         instagram
+        home
         imagenPeleador {
           title
           description
@@ -58,27 +60,23 @@ const Fighters = () => {
         console.log(data.peleadoresCollection.items);
       });
   }, [query]);
+  
 
   if (!page) {
     return "Loading...";
   }
-   
-
+  
   return (
     <div className="fightersSeccion">
       <Link to={`/${t("peleadores")}`}><h1 className="fighterstitle">{t("peleadores")}</h1></Link>
       <div className="figthersWrapper">
-        {page.map((fighter) => (
-          
+        {page.filter((fighter) => (  fighter.home=== true)).map((fighter) => (
           <div className="fighter">
-            <Link to={`/peleador/${fighter.id}`}>
             <img
               src={fighter.imagenPeleador.url}
               alt={fighter.imagenPeleador.title}
               className="fighterImg"
             />
-            </Link>
-            
             <div className="fighterFullName">
               <p className="fighterName">{fighter.nombreDelPeleador}</p>
               <p className="fighterLastname">{fighter.apellidoPeleador}</p>
@@ -98,4 +96,4 @@ const Fighters = () => {
   );
 };
 
-export default Fighters;
+export default HomeFighters;

@@ -2,6 +2,8 @@ import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
 import Home from './components/Home/Home';
 import Contact from './components/Contact/Contact';
+import Fighters from './components/Fighters/Fighters';
+import FighterDetail from './components/Fighters/FighterDetail';
 import './App.css';
 import {Switch, Route} from 'react-router-dom';
 import { Suspense } from "react";
@@ -16,6 +18,11 @@ function App() {
          <Route path="/" exact component={Home} />
         {/* <Route path="/about" component={About} /> */}
         <Route path="/contacto" component={Contact} />
+        <Route path="/contato" component={Contact} />
+        <Route path="/peleadores" component={Fighters} />
+        <Route path="/lutadores" component={Fighters} />
+        <Route path="/peleador/:id" component={FighterDetail} />
+        <Route path="/lutador/:id" component={FighterDetail} />
        {/*  <Route path='/notas' component={Notas} />  */}
       </Switch>
       <Footer />
