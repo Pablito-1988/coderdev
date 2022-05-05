@@ -12,6 +12,10 @@ select {
   border: 0;
 }
 
+select:focus-visible {
+  outline: none;
+}
+
 .dropdown {
   position: relative;
 }

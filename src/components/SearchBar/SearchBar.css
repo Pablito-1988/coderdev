@@ -73,9 +73,7 @@ a {
   color: white;
   text-transform: uppercase;
 }
-a:hover {
-  background-color: lightgrey;
-}
+
 #clearBtn {
   cursor: pointer;
 }
