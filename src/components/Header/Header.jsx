@@ -27,7 +27,7 @@ const Header = () => {
           </Link>
         </div>
         <div id="middlebox">
-          <SearchBar />
+          <SearchBar placeholder="Buscar..."/>
         </div>
         <div id="rightbox">
           <Dropdown />
