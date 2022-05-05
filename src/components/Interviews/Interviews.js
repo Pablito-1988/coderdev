@@ -9,7 +9,7 @@ const Interviews = () => {
   const query = `{
     entrevistaCollection{
       items{
-        tituloEntrevista
+        
         nombre
         apellido
         descripcionEntrevista
@@ -21,11 +21,11 @@ const Interviews = () => {
       }
     }
   }`;
-
+  ///* tituloEntrevista */
   const [page, setPage] = useState(null);
   const [lang, setLanguage] = useState(i18next.language);
   const [newLang, setNewLanguage] = useState(lang);
-
+  console.log(page)
   const description = (interview) => {
     console.log("Soy el new language " + lang);
     if (setNewLanguage === "es") {
