@@ -26,6 +26,8 @@ const Interviews = () => {
   const [lang, setLanguage] = useState(i18next.language);
   const [newLang, setNewLanguage] = useState(lang);
   console.log(page)
+  console.log(newLang)
+  console.log(setLanguage)
   const description = (interview) => {
     console.log("Soy el new language " + lang);
     if (setNewLanguage === "es") {

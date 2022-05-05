@@ -27,6 +27,7 @@ const SearchBar = ({ placeholder }) => {
   const [fighter, setFighter] = useState(null);
   const [filteredData, setFilteredData] = useState([]);
   const [wordEntered,setWordEntered] = useState("");
+  console.log(interview)
 
   useEffect(() => {
     window
