@@ -57,7 +57,7 @@ const HomeFighters = () => {
           console.log("No errors");
         }
         setPage(data.peleadoresCollection.items);
-        console.log(data.peleadoresCollection.items);
+        
       });
   }, [query]);
   
@@ -71,7 +71,7 @@ const HomeFighters = () => {
       <Link to={`/${t("peleadores")}`}><h1 className="fighterstitle">{t("peleadores")}</h1></Link>
       <div className="figthersWrapper">
         {page.filter((fighter) => (  fighter.home=== true)).map((fighter) => (
-          <div className="fighter">
+          <div key={fighter.id} className="fighter">
               <Link to={`/peleador/${fighter.id}`}>
             <img
               src={fighter.imagenPeleador.url}

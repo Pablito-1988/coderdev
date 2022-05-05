@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 
 const FighterDetail = () => {
   const { id } = useParams();
-  console.log(id);
+ 
 
   const accessToken = process.env.REACT_APP_DELIVERY_TOKEN;
   const spaceId = process.env.REACT_APP_SPACE_ID;
@@ -59,7 +59,7 @@ const FighterDetail = () => {
           console.log("No errors");
         }
         setPage(data.peleadoresCollection.items);
-        console.log(data.peleadoresCollection.items);
+        
       });
   }, [query]);
 

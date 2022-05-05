@@ -55,7 +55,7 @@ const Fighters = () => {
           console.log("No errors");
         }
         setPage(data.peleadoresCollection.items);
-        console.log(data.peleadoresCollection.items);
+        
       });
   }, [query]);
 
