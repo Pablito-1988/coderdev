@@ -79,9 +79,9 @@ const SearchBar = ({ placeholder }) => {
         <input type="text" placeholder={placeholder} value={wordEntered}  onChange={handleFilter} />
         <div className="searchIcon">
           {filteredData.length === 0 ? (
-            <i id="searchIcon" class="fa fa-search" aria-hidden="true"></i>
+            <i id="searchIcon" className="fa fa-search" aria-hidden="true"></i>
           ) : (
-            <i class="fa fa-times" aria-hidden="true" id="clearBtn" onClick={clearInput}></i>
+            <i className="fa fa-times" aria-hidden="true" id="clearBtn" onClick={clearInput}></i>
           )}
         </div>
       </div>
@@ -89,7 +89,7 @@ const SearchBar = ({ placeholder }) => {
         <div className="dataResult">
           {filteredData.map((value, key) => {
             return (
-              <Link className="dataItem" to={`/peleador/${value.id}`}>
+              <Link key={value.id} className="dataItem" to={`/peleador/${value.id}`}>
                 <p>{value.nombreCompleto}</p>
               </Link>
             );

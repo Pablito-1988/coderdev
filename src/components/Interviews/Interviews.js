@@ -71,6 +71,7 @@ const Interviews = () => {
               lastName={interview.apellido}
               date={interview.date}
               desc={description(interview)}
+              key={interview.nombre}
             />
           ))}
         </div>

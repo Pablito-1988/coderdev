@@ -7,8 +7,8 @@ const Banner = () => {
   return (
     <div className="bannerContainer">
       <div className="banner">
-        {logos.map((logo) => (
-            <div className="logoBanner">
+        {logos.map((logo, index) => (
+            <div key={index} className="logoBanner">
                 <img  src={logo.logoBanner} alt="Jenny Panichi" className="logoBannerImg" />
             </div>
         ))}     
