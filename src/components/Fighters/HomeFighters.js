@@ -59,7 +59,7 @@ const HomeFighters = () => {
         setPage(data.peleadoresCollection.items);
         
       });
-  }, [query]);
+  }, [query, accessToken, spaceId]);
   
 
   if (!page) {

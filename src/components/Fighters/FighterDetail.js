@@ -61,7 +61,7 @@ const FighterDetail = () => {
         setPage(data.peleadoresCollection.items);
         
       });
-  }, [query]);
+  }, [query, accessToken, spaceId]);
 
   if (!page) {
     return "Loading...";

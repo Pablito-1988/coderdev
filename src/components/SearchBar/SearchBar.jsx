@@ -48,7 +48,7 @@ const SearchBar = ({ placeholder }) => {
         setInterview(data.entrevistaCollection.items);
         setFighter(data.peleadoresCollection.items);
       });
-  }, [query]);
+  }, [query, accessToken, spaceId]);
   if (!fighter) {
     return "Loading...";
   }

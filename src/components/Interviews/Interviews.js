@@ -54,7 +54,7 @@ const Interviews = () => {
         }
         setPage(data.entrevistaCollection.items);
       });
-  }, [query]);
+  }, [query , accessToken, spaceId]);
 
   if (!page) {
     return "Loading...";
