@@ -26,6 +26,7 @@ const SearchBar = ({ placeholder }) => {
   const [interview, setInterview] = useState(null);
   const [fighter, setFighter] = useState(null);
   const [filteredData, setFilteredData] = useState([]);
+  const [wordEntered,setWordEntered] = useState("");
 
   useEffect(() => {
     window
@@ -54,27 +55,37 @@ const SearchBar = ({ placeholder }) => {
 
   const handleFilter = (e) => {
     const searchedWord = e.target.value;
+    setWordEntered(searchedWord);
     const newFilter = fighter.filter((item) => {
       return item.nombreCompleto
         .toLowerCase()
         .includes(searchedWord.toLowerCase());
     });
-    if (searchedWord ===""){
+    if (searchedWord === "") {
       setFilteredData([]);
-    }else{
-    setFilteredData(newFilter);
-  }
+    } else {
+      setFilteredData(newFilter);
+    }
+  };
+
+  const clearInput = () => {
+    setFilteredData([]);
+    setWordEntered("");
   };
 
   return (
     <div className="search">
       <div className="searchInput">
-        <input type="text" placeholder={placeholder} onChange={handleFilter} />
+        <input type="text" placeholder={placeholder} value={wordEntered}  onChange={handleFilter} />
         <div className="searchIcon">
-          <i id="searchIcon" class="fa fa-search" aria-hidden="true"></i>
+          {filteredData.length === 0 ? (
+            <i id="searchIcon" class="fa fa-search" aria-hidden="true"></i>
+          ) : (
+            <i class="fa fa-times" aria-hidden="true" id="clearBtn" onClick={clearInput}></i>
+          )}
         </div>
       </div>
-      {filteredData.length != 0 && (
+      {filteredData.length !== 0 && (
         <div className="dataResult">
           {filteredData.map((value, key) => {
             return (
