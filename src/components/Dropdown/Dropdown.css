@@ -19,3 +19,24 @@ select:focus-visible {
 .dropdown {
   position: relative;
 }
+
+@media only screen and (max-width:798px){
+  .paddingDropdown{
+    padding:0;
+  }
+
+  select{
+    padding: 0;
+  }
+  .dropdown{
+    /* position: fixed; */
+    font-family: 'Exo', sans-serif;
+    text-align:center;
+    text-align: center;
+    color: #ffffff;
+    text-transform: uppercase;
+    font-weight: 900;
+    cursor: pointer;
+    font-size: 1.2rem;
+  }
+}

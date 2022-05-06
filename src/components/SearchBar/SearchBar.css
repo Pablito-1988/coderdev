@@ -1,6 +1,6 @@
 .search {
   text-align: center;
-  padding: 1.5rem 1.5rem 0.9rem;
+  padding: 1.5rem 1.5rem 0.9rem 15rem;
 }
 
 .searchInputs {
@@ -20,7 +20,7 @@
   width: 25rem;
   font-family: "Exo", sans-serif;
   border-bottom: 2px solid #ffffff;
-  color:white;
+  color: white;
 }
 
 .search input::placeholder {
@@ -76,4 +76,16 @@ a {
 
 #clearBtn {
   cursor: pointer;
+}
+@media only screen and (max-width: 798px) {
+  .search input {
+    display: none;
+  }
+  .search {
+    justify-self: center;
+    padding: 1rem;
+  }
+  #searchIcon {
+    width: 1.5rem;
+  }
 }

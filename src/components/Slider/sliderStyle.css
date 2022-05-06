@@ -73,9 +73,9 @@
     }
 }
 @media (max-width: 768px){
-    .sliderContainer{
+    /* .sliderContainer{
         margin-top: 50%;
-    }
+    } */
     .container-dots{
         top: 60%;
     }
