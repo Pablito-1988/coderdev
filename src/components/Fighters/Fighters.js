@@ -71,7 +71,7 @@ const Fighters = () => {
         {page.map((fighter) => (
           
           <div key={fighter.id} className="fighter">
-            <Link to={`/peleador/${fighter.id}`}>
+            <Link to={`/peleador/${fighter.nombreCompleto}`}>
             <img
               src={fighter.imagenPeleador.url}
               alt={fighter.imagenPeleador.title}

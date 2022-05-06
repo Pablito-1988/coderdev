@@ -4,14 +4,14 @@ import { useState, useEffect } from "react";
 
 const FighterDetail = () => {
   const { id } = useParams();
- 
+  console.log(id)
 
   const accessToken = process.env.REACT_APP_DELIVERY_TOKEN;
   const spaceId = process.env.REACT_APP_SPACE_ID;
 
   const query = `{
     
-    peleadoresCollection(where : {id: ${id}}){
+    peleadoresCollection(where : { nombreCompleto: "${id}"}){
       items{
         id
         nombreCompleto
