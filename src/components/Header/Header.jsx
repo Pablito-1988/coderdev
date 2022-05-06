@@ -36,7 +36,6 @@ const Header = () => {
           <Dropdown />
         </div>
         <div className="mobile-menu-icon" onClick={handleClick}>
-          {/* <i> {click ? <FiX /> : <FiMenu />} </i> */}
           <i className={click ? 'fas fa-times' : 'fas fa-bars'} />
         </div>
       </div>

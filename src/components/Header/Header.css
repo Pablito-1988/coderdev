@@ -41,6 +41,7 @@
   text-transform: uppercase;
   font-weight: 900;
   cursor: pointer;
+  position: relative;
 }
 
 .mobile-menu-icon {
@@ -56,15 +57,17 @@ button {
   font-size: 20px;
   background: none;
 }
-.nav-links li:hover:before {
+.nav-links li a:hover:before {
   content: "";
   position: absolute;
   background: #cd9e45;
   width: 10px;
   height: 10px;
   border-radius: 100%;
-  left: calc(50% - 9px);
-  bottom: calc(20% - 0.6rem);
+  left: calc(50% - 3px);
+    bottom: calc(20% - 1.5rem);
+  /* left: calc(30% - 9px);
+  bottom: calc(50% - 0.6rem); */
 }
 
 .nav-links li a:hover {
@@ -112,7 +115,7 @@ button {
     width: 100%;
     background-color: black;
     padding-inline-start: 0;
-    margin-top:4rem;
+    margin-top:2rem;
     z-index: 1;
   }
   .nav-links-mobile ul li {
@@ -123,7 +126,9 @@ button {
 
   .menuItem{
     text-align: center;
-    padding:.7rem
+    padding:.7rem;
+    font-size: 1rem;
+
   }
   .nav-links-mobile li a {
     text-align:center;
@@ -133,7 +138,6 @@ button {
     cursor: pointer;
   }
   .mobile-menu-icon {
-    /* position: absolute; */
     display: block;
     right: 20px;
     color:white;
