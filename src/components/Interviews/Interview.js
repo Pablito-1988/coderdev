@@ -1,6 +1,7 @@
 import React from "react";
 import "./Interview.css";
 import moment from 'moment';
+import { Link } from "react-router-dom";
 
 const Interview = (props) => {
   /* const name = props.name; */
@@ -8,10 +9,20 @@ const Interview = (props) => {
   const lastName = props.lastName;
   const date = moment(props.date).format('DD/MM/YYYY');
   const descripcionEntrevista = props.desc;
+  const imagen = props.imagen;
+  const link = props.link;
+ /*  console.log(imagen.url) */
 
   return (
     <div className="mainInterviewContainer">
-      <iframe
+      <div className="box">
+       {imagen && <img className="interviewImage" src={imagen.url} alt="Jenny Panichi" />}
+        <div className="capa">
+        {imagen && <a href={link}><i id='playIcon' className="far fa-play-circle"></i></a> }
+        
+        </div>
+      </div>
+      {/* <iframe
         width="300"
         height="300"
         src="https://www.youtube.com/embed/r4RC-zn8cRg"
@@ -19,7 +30,7 @@ const Interview = (props) => {
         frameBorder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
         allowFullScreen
-      ></iframe>
+      ></iframe> */}
       <div className="figtherData">
         <div className="figtherName">
           <i id="figtherIcon" className="far fa-user-circle"></i>

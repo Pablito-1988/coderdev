@@ -4,6 +4,7 @@ import Home from './components/Home/Home';
 import Contact from './components/Contact/Contact';
 import Fighters from './components/Fighters/Fighters';
 import FighterDetail from './components/Fighters/FighterDetail';
+import Interviews from './components/Interviews/Interviews';
 import './App.css';
 import {Switch, Route} from 'react-router-dom';
 import { Suspense } from "react";
@@ -23,7 +24,7 @@ function App() {
         <Route path="/lutadores" component={Fighters} />
         <Route path="/peleador/:id" component={FighterDetail} />
         <Route path="/lutador/:id" component={FighterDetail} />
-       {/*  <Route path='/notas' component={Notas} />  */}
+        <Route path='/entrevistas' component={Interviews} />  
       </Switch>
       <Footer />
       </Suspense>
