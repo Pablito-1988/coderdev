@@ -75,8 +75,8 @@ const Interviews = () => {
   
     return (
       < >
-        <div>
-            <img src={imagen} alt="Jenny Panichi" />
+        <div className='inteviewBanner'>
+            <img className='inteviewBanner' src={imagen} alt="Jenny Panichi" />
         </div>
         <h1 className='interviewTitle'>Entrevistas</h1>
         <div className="interviewContainer">

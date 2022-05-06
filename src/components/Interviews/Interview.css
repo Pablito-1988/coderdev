@@ -16,12 +16,16 @@
   width: 100%;
   margin-top: 30px;
 }
+.inteviewBanner{
+  width: 100%;
+}
 .interviewsTitle {
   color: red;
   font-size: 2rem;
   margin-bottom: 50px;
   margin-top: 25px;
   font-weight: 800;
+  width: 100%;
   
 }
 .intereviewsWrapper {
