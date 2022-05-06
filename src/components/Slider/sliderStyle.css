@@ -73,9 +73,7 @@
     }
 }
 @media (max-width: 768px){
-    /* .sliderContainer{
-        margin-top: 50%;
-    } */
+    
     .container-dots{
         top: 60%;
     }
