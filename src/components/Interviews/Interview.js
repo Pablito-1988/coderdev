@@ -1,6 +1,7 @@
 import React from "react";
 import "./Interview.css";
 import moment from 'moment';
+import { Link } from "react-router-dom";
 
 
 const Interview = (props) => {
@@ -22,24 +23,17 @@ const Interview = (props) => {
         
         </div>
       </div>
-      {/* <iframe
-        width="300"
-        height="300"
-        src="https://www.youtube.com/embed/r4RC-zn8cRg"
-        title="YouTube video player"
-        frameBorder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowFullScreen
-      ></iframe> */}
       <div className="figtherData">
-        <div className="figtherName">
-          <i id="figtherIcon" className="far fa-user-circle"></i>
-
+       <div className="figtherName">
+         <Link to={`/peleador/${lastName}`}>
+         <i id="figtherIcon" className="far fa-user-circle"></i>
+         </Link>
           <p>{firstName}</p>
           <p className="interviewLastname">{lastName}</p>
         </div>
 
         <p className="interviewDate">{date}</p>
+       
       </div>
       <p className="interviewDescription">{descripcionEntrevista}</p>
     </div>

@@ -12,7 +12,7 @@ const FighterDetail = () => {
 
   const query = `{
     
-    peleadoresCollection(where : { nombreCompleto: "${id}"}){
+    peleadoresCollection(where : { apellidoPeleador_contains : "${id}"}){
       items{
         id
         nombreCompleto
