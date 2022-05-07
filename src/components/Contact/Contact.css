@@ -100,3 +100,28 @@ opacity: 1;}
     100%{font-size: 0px;
         opacity: 0;}
 }
+
+@media (max-width:760px){
+    .contactMain{
+        flex-direction: column;
+    }
+   .formWrapper{
+        width: 100%;
+    }
+    .nameAndEmailContainer{
+        flex-direction: column;
+    }
+    .nameInput{
+        width: 90%;
+    }
+    .emailInput{
+        width: 90%;
+    }
+    .button{
+        width:30%
+    }
+    .infoImg{
+        width: 100%;
+    }
+
+}

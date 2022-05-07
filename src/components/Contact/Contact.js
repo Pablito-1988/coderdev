@@ -78,10 +78,10 @@ const Contact = () => {
             <div className="info">
               <h3 className="dataTitle">DATOS DE CONTACTO</h3>
               <p className="contactEmail">Email: Jennypanichi@gmail.com</p>
-              <p className="contactPhone">Teléfono: +57 300 888 8888</p>
+              
             </div>
-            <div className="infoImg">
-              <img src={contactImg} alt="" />
+            <div >
+              <img className="infoImg" src={contactImg} alt="" />
             </div>
           </div>
         </div>
