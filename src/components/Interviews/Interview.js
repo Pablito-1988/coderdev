@@ -19,7 +19,7 @@ const Interview = (props) => {
       <div className="box">
        {imagen && <img className="interviewImage" src={imagen.url} alt="Jenny Panichi" />}
         <div className="capa">
-        {imagen && <a href={link}><i id='playIcon' className="far fa-play-circle"></i></a> }
+        {imagen && <a href={link} rel="noreferrer" target="_blank"><i id='playIcon' className="far fa-play-circle"></i></a> }
         
         </div>
       </div>
