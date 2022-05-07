@@ -84,6 +84,9 @@
   .fighter {
     width: 50%;
   }
+  .data{
+    padding: 20px;
+  }
 }
 a{ text-decoration: none;}
 

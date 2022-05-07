@@ -10,7 +10,7 @@ const Dropdown = () => {
   const [click, setClick] = useState(false);
 
   const handleClick = () => setClick(!click);
-
+  console.log(handleClick)
   const handlerLanguageChange = (e) => {
     i18n.changeLanguage(e.target.value);
   };
