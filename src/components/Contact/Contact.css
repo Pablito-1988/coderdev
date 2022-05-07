@@ -123,5 +123,8 @@ opacity: 1;}
     .infoImg{
         width: 100%;
     }
+    .info{
+        padding: 25px;
+    }
 
 }
