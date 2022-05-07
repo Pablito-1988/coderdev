@@ -4,8 +4,8 @@ import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
 const SearchBar = ({ placeholder }) => {
-  const accessToken = "_8rkJ8PJK5FFmNgZI7aL5tShQCi9hETu4NOK7vkwtAw"
-  const spaceId = process.env.REACT_APP_SPACE_ID;
+  const accessToken =  "_8rkJ8PJK5FFmNgZI7aL5tShQCi9hETu4NOK7vkwtAw"
+  const spaceId = "0ydrshsl7jeq"
   const query = `{
     entrevistaCollection{
       items{
