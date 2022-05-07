@@ -3,9 +3,9 @@
   padding: 1.5rem 1.5rem 0.9rem 15rem;
 }
 
-.searchInputs {
-  margin-top: 105px;
-  display: flex;
+.searchInput {
+  border-bottom: 2px solid #ffffff;
+
 }
 
 .search input {
@@ -19,7 +19,6 @@
   height: 30px;
   width: 25rem;
   font-family: "Exo", sans-serif;
-  border-bottom: 2px solid #ffffff;
   color: white;
 }
 
@@ -44,13 +43,14 @@
 
 .dataResult {
   margin-top: 5px;
-  width: 25rem;
-  height: 10rem;
+  width: 100%;
+  height: auto;
   background-color: white;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   overflow: hidden;
   overflow-y: auto;
   display: inline-block;
+
 }
 
 .dataResult::-webkit-scrollbar {
@@ -87,5 +87,9 @@ a {
   }
   #searchIcon {
     width: 1.5rem;
+  }
+  .searchInput {
+    border-bottom: none;
+  
   }
 }
