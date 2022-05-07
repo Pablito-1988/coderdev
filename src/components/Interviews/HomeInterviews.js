@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import i18next from "i18next";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
+import Loading from "../Loading/Loading";
 
 const HomeInterviews = () => {
   const { t } = useTranslation(["figthers"]);
@@ -72,7 +73,10 @@ const HomeInterviews = () => {
   }, [query , accessToken, spaceId]);
 
   if (!page) {
-    return "Loading...";
+    return (
+      <div className='loading'>
+          <Loading/>
+      </div>)
   }
 
   return (

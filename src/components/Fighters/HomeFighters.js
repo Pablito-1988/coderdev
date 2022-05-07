@@ -3,6 +3,7 @@ import "./Fighters.css";
 import { useState, useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
+import Loading from "../Loading/Loading";
 
 const HomeFighters = () => {
   const { t } = useTranslation(["figthers"]);
@@ -63,7 +64,10 @@ const HomeFighters = () => {
   
 
   if (!page) {
-    return "Loading...";
+    return (
+      <div className='loading'>
+          <Loading/>
+      </div>)
   }
   
   return (

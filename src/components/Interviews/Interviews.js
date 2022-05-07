@@ -3,6 +3,7 @@ import Interview from "./Interview";
 import { useState, useEffect } from "react";
 import i18next from "i18next";
 import imagen from "./interview.png"
+import Loading from "../Loading/Loading";
 
 const Interviews = () => {
     
@@ -70,7 +71,10 @@ const Interviews = () => {
     }, [query , accessToken, spaceId]);
   
     if (!page) {
-      return "Loading...";
+      return (
+        <div className='loading'>
+            <Loading/>
+        </div>)
     }
   
     return (

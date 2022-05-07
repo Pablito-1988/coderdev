@@ -1,6 +1,7 @@
 import React from "react";
 import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
+import Loading from "../Loading/Loading";
 
 const FighterDetail = () => {
   const { id } = useParams();
@@ -64,7 +65,10 @@ const FighterDetail = () => {
   }, [query, accessToken, spaceId]);
 
   if (!page) {
-    return "Loading...";
+    return (
+      <div className='loading'>
+          <Loading/>
+      </div>)
   }
 
   return (
