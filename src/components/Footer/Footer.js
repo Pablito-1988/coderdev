@@ -1,6 +1,6 @@
 import React from "react";
 import "./Footer.css";
-import logo from "../../assets/img/diamond.png";
+import logo from "../../assets/img/logoPng.png";
 import { Link } from "react-router-dom/cjs/react-router-dom.min";
 import { useTranslation } from "react-i18next";
 
