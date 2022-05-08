@@ -2,7 +2,7 @@ import React from "react";
 import "../Dropdown/Dropdown.css";
 import "flag-icons";
 import { useTranslation } from "react-i18next";
-import { useState } from "react";
+
 
 const Dropdown = (props) => {
   const { i18n } = useTranslation("header");
