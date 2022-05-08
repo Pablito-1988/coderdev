@@ -90,7 +90,7 @@ const SearchBar = ({ placeholder }) => {
         <div className="dataResult">
           {filteredData.map((value, key) => {
             return (
-              <Link key={value.id} className="dataItem" to={`/peleador/${value.apellidoPeleador}`}>
+              <Link key={value.id} className="dataItem" onClick={clearInput} to={`/peleador/${value.apellidoPeleador}`}>
                 <p>{value.nombreCompleto}</p>
               </Link>
             );
