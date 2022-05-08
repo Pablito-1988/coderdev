@@ -69,13 +69,13 @@
         height: 30%;
     }
     .container-dots {
-        top: 85%;
+        top: 100%;
     }
 }
-@media (max-width: 768px){
+@media (max-width: 1024px){
     
     .container-dots{
-        top: 60%;
+        top: 90%;
     }
     .dot{
         width: 10px;

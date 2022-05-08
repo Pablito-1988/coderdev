@@ -39,6 +39,8 @@ const HomeInterviews = () => {
   const [page, setPage] = useState(null);
   const [lang, setLanguage] = useState(i18next.language);
   const [newLang, setNewLanguage] = useState(lang);
+  console.log(newLang)
+  console.log(setLanguage)
 
   const description = (interview) => {
     if (setNewLanguage === "pt") {
