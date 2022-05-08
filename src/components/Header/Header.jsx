@@ -29,8 +29,8 @@ const Header = () => {
             <img src={MainLogo} alt="Jenny Panichi" className="logoHeader" />
           </Link>
         </div>
-        <div id="middlebox">
-          <SearchBar placeholder="Buscar..." onClick={closeMobileMenu}/>
+        <div id="middlebox" onClick={closeMobileMenu}>
+          <SearchBar placeholder="Buscar..." />
         </div>
         <div id="rightbox">
           <Dropdown />
