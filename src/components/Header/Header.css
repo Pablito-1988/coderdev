@@ -82,6 +82,10 @@ button {
   #rightbox{
     display:none;
   }
+  .topDivHeader {
+    padding:1.5rem 0 .5rem;
+    
+  }
   .navbar{
     display: flex;
     flex-direction:row;
@@ -97,7 +101,7 @@ button {
     left: 35px;
   }
   .logoHeader{
-    padding:1.5rem 1rem;
+    padding:0 1rem 1.5rem;
     width:1.5rem;
   }
   .nav-links {
@@ -144,7 +148,7 @@ button {
     display: block;
     right: 20px;
     color:white;
-    padding: 1.5rem 1rem;
+    padding: 0 1rem 1.5rem;
   }
   .hero h1 {
     font-size: 50px;
