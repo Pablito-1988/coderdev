@@ -42,11 +42,11 @@ const Header = () => {
       
         <ul
           className={click ? "nav-links-mobile" : "nav-links"}
-          onClick={closeMobileMenu}
+          
         >
           {click ? (
-            <li className="menuItem" onClick={closeMobileMenu}>
-              <Dropdown />{" "}
+            <li className="menuItem" >
+              <Dropdown closeMenu={closeMobileMenu}/>
             </li>
           ) : null}
           <li key={t("entrevistas.nombre")} className="menuItem">

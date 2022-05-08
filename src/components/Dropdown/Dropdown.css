@@ -38,5 +38,6 @@ select:focus-visible {
     font-weight: 900;
     cursor: pointer;
     font-size: 1rem;
+    padding-right:0rem;
   }
 }

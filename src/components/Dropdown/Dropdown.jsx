@@ -5,7 +5,7 @@ import { useTranslation } from "react-i18next";
 import { useState } from "react";
 
 
-const Dropdown = () => {
+const Dropdown = (props) => {
   const { i18n } = useTranslation("header");
   const [click, setClick] = useState(false);
 
@@ -13,6 +13,7 @@ const Dropdown = () => {
   console.log(handleClick)
   const handlerLanguageChange = (e) => {
     i18n.changeLanguage(e.target.value);
+    props.closeMenu();
   };
 
   return (
@@ -24,34 +25,13 @@ const Dropdown = () => {
           onChange={handlerLanguageChange}
         >
           Idioma
-          <option className="dropdown-menu" value="es">
+          <option className="dropdown-menu" value="es" >
             Español
           </option>
           <option className="dropdown-menu" value="pt">
             Português
           </option>
         </select>
-        {/* <ul
-        onClick={handleClick}
-        // className={click ? 'dropdown-menu clicked' : 'dropdown-menu'}
-      >
-        <li key="es" value="es" onClick={handlerLanguageChange}><a>Español</a></li>
-        <li key="pt" value="pt" onClick={handlerLanguageChange}><a>Español</a></li> */}
-
-        {/* {MenuItems.map((item, index) => {
-          return (
-            <li key={index}>
-              <Link
-                className={item.cName}
-                to={item.path} 
-                onClick={() => setClick(false)}
-              >
-                {item.title}
-              </Link>
-            </li>
-          );
-        })} */}
-      {/* </ul> */}
       </div>
     </div>
   );
