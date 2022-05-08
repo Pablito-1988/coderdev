@@ -80,9 +80,9 @@ const SearchBar = ({ placeholder }) => {
         <input type="text" placeholder={placeholder} value={wordEntered}  onChange={handleFilter} />
         <div className="searchIcon">
           {filteredData.length === 0 ? (
-            <i id="searchIcon" className="fa fa-search" aria-hidden="true"></i>
+            <i id="searchIcon" className="fa fa-search widthSearch" aria-hidden="true"></i>
           ) : (
-            <i className="fa fa-times" aria-hidden="true" id="clearBtn" onClick={clearInput}></i>
+            <i className="fa fa-times widthSearch" aria-hidden="true" id="clearBtn" onClick={clearInput}></i>
           )}
         </div>
       </div>
