@@ -1,4 +1,10 @@
 {
-    "peleadores" : "PELEADORES"
+    "peleadores" : "PELEADORES",
+    "titulo": "Datos del Peleador",
+    "nacionalidad":"Nacionalidad",
+    "categoria":"Categoría",
+    "record":"Récord",
+    "empresa":"Empresa",
+    "redesSociales":"Redes Sociales"
 
 }

@@ -2,9 +2,11 @@ import React from "react";
 import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
 import Loading from "../Loading/Loading";
+import { useTranslation } from "react-i18next";
 
 const FighterDetail = () => {
   const { id } = useParams();
+  const { t } = useTranslation(["figthers"]);
   console.log(id)
 
   const accessToken =  "_8rkJ8PJK5FFmNgZI7aL5tShQCi9hETu4NOK7vkwtAw"
@@ -86,14 +88,14 @@ const FighterDetail = () => {
               className="fighterImg"
             />
         </div>
-        <h2 className="fullNameAndAlias">Datos del Peleador</h2>
+        <h2 className="fullNameAndAlias">{t("titulo")}</h2>
         <div className="data">
-            <p className="FighterData">Nacionalidad : {page[0].nacionalidad}</p>
-            <p className="FighterData">Categoria: {page[0].categoria}</p>
-            <p className="FighterData">Record: {page[0].record}</p>
-            <p className="FighterData">Empresa: {page[0].empresa}</p>
+            <p className="FighterData">{t("nacionalidad")}: {page[0].nacionalidad}</p>
+            <p className="FighterData">{t("categoria")}: {page[0].categoria}</p>
+            <p className="FighterData">{t("record")}: {page[0].record}</p>
+            <p className="FighterData">{t("empresa")}: {page[0].empresa}</p>
         </div>
-        <h2 className="fullNameAndAlias">Redes Sociales</h2>
+        <h2 className="fullNameAndAlias">{t("redesSociales")}</h2>
         <div className="fighterSocialMediaDetail">
               <a href={page[0].twitter} target="_blank" rel="noreferrer">
                 <i id="socialMediaTwitter" className="fab fa-twitter"></i>

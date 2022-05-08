@@ -1,3 +1,9 @@
 {
-    "peleadores" : "LUTADORES"
+    "peleadores" : "LUTADORES",
+    "titulo": "Dados do Lutador",
+    "nacionalidad":"Nacionalidade",
+    "categoria":"Categoria",
+    "record":"Record",
+    "empresa":"O negócio",
+    "redesSociales":"Redes sociais"
 }

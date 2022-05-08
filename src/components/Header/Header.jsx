@@ -58,9 +58,9 @@ const Header = () => {
           <li key={t("peleadores.nombre")} className="menuItem">
             <Link to={t("peleadores.ref")} onClick={closeMobileMenu}>{t("peleadores.nombre")}</Link>
           </li>
-          <li key={t("calendario.nombre")} className="menuItem">
+          {/* <li key={t("calendario.nombre")} className="menuItem">
             <Link to={t("calendario.ref")} onClick={closeMobileMenu}>{t("calendario.nombre")}</Link>
-          </li>
+          </li> */}
           <li key={t("quiensoy.nombre")} className="menuItem">
             <Link to={t("quiensoy.ref")} onClick={closeMobileMenu}>{t("quiensoy.nombre")}</Link>
           </li>
