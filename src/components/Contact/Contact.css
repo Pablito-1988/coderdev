@@ -48,6 +48,7 @@
     padding: 10px;
     margin-bottom: 10px;
     font-size: 20px;
+    font-family: "Exo", sans-serif;
 }
 .emailInput{
     width: 45%;
@@ -57,12 +58,14 @@
     padding: 10px;
     margin-bottom: 10px;
     font-size: 20px;
+    font-family: "Exo", sans-serif;
 }
 textarea{
     width: 100%;
     font-size: 20px;
     height: 300px;
     resize: none;
+    font-family: "Exo", sans-serif;
 }
 
 .button{

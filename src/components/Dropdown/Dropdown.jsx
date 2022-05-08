@@ -4,13 +4,9 @@ import "flag-icons";
 import { useTranslation } from "react-i18next";
 import { useState } from "react";
 
-
 const Dropdown = (props) => {
   const { i18n } = useTranslation("header");
-  const [click, setClick] = useState(false);
 
-  const handleClick = () => setClick(!click);
-  console.log(handleClick)
   const handlerLanguageChange = (e) => {
     i18n.changeLanguage(e.target.value);
     props.closeMenu();
@@ -25,7 +21,7 @@ const Dropdown = (props) => {
           onChange={handlerLanguageChange}
         >
           Idioma
-          <option className="dropdown-menu" value="es" >
+          <option className="dropdown-menu" value="es">
             Español
           </option>
           <option className="dropdown-menu" value="pt">

@@ -1,7 +1,7 @@
 import React from "react";
 import { useEffect, useState } from "react";
 import "./Header.css";
-import MainLogo from "../../assets/img/diamond.png";
+import MainLogo from "../../assets/img/logoPng.png";
 import Dropdown from "../Dropdown/Dropdown";
 import SearchBar from "../SearchBar/SearchBar";
 import { useTranslation } from "react-i18next";

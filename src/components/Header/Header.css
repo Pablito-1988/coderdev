@@ -76,8 +76,8 @@ button {
   color: #cd9e45;
 }
 .logoHeader{
-  padding:1.7em 2em 0.7em 1.5em;
-  width:3rem;
+  padding:1.7em 1em 0.7em 1.5em;
+  width:6rem;
 }
 
 @media (max-width: 768px) {
@@ -103,8 +103,8 @@ button {
     left: 35px;
   }
   .logoHeader{
-    padding:0 1rem 1.5rem;
-    width:1.5rem;
+    padding:0 0rem 1.5rem 1rem;
+    width:3.5rem;
   }
   .nav-links {
     display: none;

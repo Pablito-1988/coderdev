@@ -8,8 +8,8 @@ import Loading from "../Loading/Loading";
 
 const HomeInterviews = () => {
   const { t } = useTranslation(["figthers"]);
-  const accessToken =  "_8rkJ8PJK5FFmNgZI7aL5tShQCi9hETu4NOK7vkwtAw"
-  const spaceId = "0ydrshsl7jeq"
+  const accessToken = "_8rkJ8PJK5FFmNgZI7aL5tShQCi9hETu4NOK7vkwtAw";
+  const spaceId = "0ydrshsl7jeq";
   const query = `{
     entrevistaCollection{
       items{
@@ -39,11 +39,8 @@ const HomeInterviews = () => {
   const [page, setPage] = useState(null);
   const [lang, setLanguage] = useState(i18next.language);
   const [newLang, setNewLanguage] = useState(lang);
-  console.log(page)
-  console.log(newLang)
-  console.log(setLanguage)
+
   const description = (interview) => {
-    console.log("Soy el new language " + lang);
     if (setNewLanguage === "es") {
       return interview.descripcionEntrevista;
     } else {
@@ -70,31 +67,36 @@ const HomeInterviews = () => {
         }
         setPage(data.entrevistaCollection.items);
       });
-  }, [query , accessToken, spaceId]);
+  }, [query, accessToken, spaceId]);
 
   if (!page) {
     return (
-      <div className='loading'>
-          <Loading/>
-      </div>)
+      <div className="loading">
+        <Loading />
+      </div>
+    );
   }
 
   return (
     <>
       <div className="interviewsContainer">
-        <Link to={`/${t("entrevistas")}`}><h3 className="interviewsTitle">ENTREVISTAS</h3></Link>
+        <Link to={`/${t("entrevistas")}`}>
+          <h3 className="interviewsTitle">ENTREVISTAS</h3>
+        </Link>
         <div className="intereviewsWrapper">
-          {page.filter((interview) => ( interview.home === true )).map((interview) => (
-            <Interview
-            firstName={interview.nombre}
-            imagen ={interview.imagenEntrevista}
-            lastName={interview.apellido}
-            date={interview.date}
-            link = {interview.linkVideo}
-            desc={description(interview)}
-            key={interview.nombre}
-            />
-          ))}
+          {page
+            .filter((interview) => interview.home === true)
+            .map((interview) => (
+              <Interview
+                firstName={interview.nombre}
+                imagen={interview.imagenEntrevista}
+                lastName={interview.apellido}
+                date={interview.date}
+                link={interview.linkVideo}
+                desc={description(interview)}
+                key={interview.nombre}
+              />
+            ))}
         </div>
       </div>
     </>
