@@ -85,6 +85,11 @@
   .fighter {
     width: 50%;
   }
+  .fighterstitle {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    margin-top: 1.5rem;
+  }
   .data{
     padding: 20px;
   }

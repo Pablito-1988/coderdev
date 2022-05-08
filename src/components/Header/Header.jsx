@@ -30,7 +30,7 @@ const Header = () => {
           </Link>
         </div>
         <div id="middlebox">
-          <SearchBar placeholder="Buscar..." />
+          <SearchBar placeholder="Buscar..." onClick={closeMobileMenu}/>
         </div>
         <div id="rightbox">
           <Dropdown />
