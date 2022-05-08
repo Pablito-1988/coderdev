@@ -64,18 +64,18 @@
     70%{margin-left: -270%;}
     100%{margin-left: -270%;}
 }
-@media (min-width: 1025px) {
+@media (max-width: 1919px) {
     .slider{
         height: 30%;
     }
     .container-dots {
-        top: 100%;
+        top: 200%;
     }
 }
-@media (max-width: 1024px){
+@media (min-width: 1024px){
     
     .container-dots{
-        top: 90%;
+        top: 110%;
     }
     .dot{
         width: 10px;
