@@ -42,13 +42,13 @@
 
 .dataResult {
   margin-top: 5px;
-  width: auto;
+  width: 29.1rem;
   height: auto;
   background-color: white;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   overflow: hidden;
   overflow-y: auto;
-  display: inline-block;
+  display: inherit;
   position: absolute;
   z-index: 2;
 }
@@ -63,6 +63,7 @@
   display: flex;
   align-items: center;
   color: black;
+  
 }
 
 .dataItem p {
@@ -83,6 +84,13 @@ a {
     width: 10rem;
     padding:0;
     margin-top:-20px;
+  }
+  .dataResult{
+    width:auto;
+  }
+  .dataResult .dataItem {
+    font-size:.8rem;
+    width:10.5rem;
   }
   .search {
     justify-self: center;
