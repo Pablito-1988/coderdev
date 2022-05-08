@@ -3,13 +3,23 @@ import portada from "../Interviews/interview.png";
 import contactImg from "../../assets/img/contactImg.png";
 import "./Contact.css";
 import emailjs from "@emailjs/browser";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Modal from "./Modal";
+import { useTranslation } from "react-i18next";
+import i18next from "i18next";
 
 const Contact = () => {
   const service = process.env.REACT_APP_SERVICE;
   const template = process.env.REACT_APP_TEMPLATE;
   const user = process.env.REACT_APP_USER;
+  const { t } = useTranslation(["contact"]);
+
+
+  useEffect(() => {
+    if (localStorage.getItem("i18nextLng")?.length > 2) {
+      i18next.changeLanguage("es");
+    }
+  }, []);
 
   const [showModal, setShowModal] = useState(false);
   function sendEmail(e) {
@@ -34,11 +44,11 @@ const Contact = () => {
         </div>
         <div className="contactMain">
           <div className="formWrapper">
-            <h2 className="formTitle">DEJAME TU MENSAJE</h2>
+            <h2 className="formTitle">{t("tituloForm")}</h2>
             <div className="formContainer">
               {showModal && <Modal />}
               <p className="formQuote">
-                Utilice el siguiente formulario para enviarme su consulta
+              {t("subtituloForm")}
               </p>
               <form className="form" onSubmit={sendEmail}>
                 <div className="nameAndEmailContainer">
@@ -46,7 +56,7 @@ const Contact = () => {
                     className="nameInput"
                     type="text"
                     name="fullName"
-                    placeholder="Nombre"
+                    placeholder={t("nombre")}
                     required
                   />
                   <input
@@ -54,7 +64,7 @@ const Contact = () => {
                     type="email"
                     name="email"
                     id=""
-                    placeholder="Correo electrónico"
+                    placeholder={t("email")}
                     required
                   />
                 </div>
@@ -63,12 +73,12 @@ const Contact = () => {
                   cols="30"
                   name="text"
                   rows="10"
-                  placeholder="Mensaje"
+                  placeholder={t("mensaje")}
                   required
                 ></textarea>
                 <div className="submitButton">
                   <button className="button" type="submit">
-                    Entregar
+                  {t("button")}
                   </button>
                 </div>
               </form>
@@ -76,8 +86,8 @@ const Contact = () => {
           </div>
           <div className="contactInfo">
             <div className="info">
-              <h3 className="dataTitle">DATOS DE CONTACTO</h3>
-              <p className="contactEmail">Email: Jennypanichi@gmail.com</p>
+              <h3 className="dataTitle">{t("datosDeContacto")}</h3>
+              <p className="contactEmail">E-mail: Jennypanichi@gmail.com</p>
               
             </div>
             <div >

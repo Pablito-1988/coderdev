@@ -41,10 +41,10 @@ const HomeInterviews = () => {
   const [newLang, setNewLanguage] = useState(lang);
 
   const description = (interview) => {
-    if (setNewLanguage === "es") {
-      return interview.descripcionEntrevista;
-    } else {
+    if (setNewLanguage === "pt") {
       return interview.descripcionPt;
+    } else {
+      return interview.descripcionEntrevista;
     }
   };
 

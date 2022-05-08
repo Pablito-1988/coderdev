@@ -70,6 +70,9 @@ textarea{
 
 .button{
     background-color: black;
+    font-family: "Exo", sans-serif;
+    text-transform: uppercase;
+    font-weight:800;
     color: white;
     border: 1px solid black;
     width: 20%;

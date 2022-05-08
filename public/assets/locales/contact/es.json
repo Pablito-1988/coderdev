@@ -1,0 +1,9 @@
+{
+    "tituloForm" : "DEJAME TU MENSAJE",
+    "subtituloForm": "Utilice el siguiente formulario para enviarme su consulta",
+    "nombre":"Nombre",
+    "email":"Email",
+    "mensaje":"Mensaje",
+    "button":"Enviar",
+    "datosDeContacto":"DATOS DE CONTACTO"
+}
