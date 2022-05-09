@@ -1,0 +1,37 @@
+
+.aboutContainer{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    background-color: black;
+}
+.aboutTitle{
+    color: #cea24e;
+    text-align: center;
+    font-size: 2rem;
+}
+.aboutInfo{
+    display: flex;
+    width: 90%;
+    gap: 20px;
+
+}
+.aboutMainImage{
+    width: 100%;
+}
+.aboutText{
+    color: white;
+    width: 50%;
+    font-size: 1.5rem;
+
+}
+.workResume{
+    display: flex;
+    width: 90%;
+    justify-content: center;
+}
+.workTitle{
+    color: #cea24e;
+    text-align: center;
+}
