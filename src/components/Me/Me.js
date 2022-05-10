@@ -1,6 +1,6 @@
 import "./Me.css";
 import AboutBanner from "./AboutBanner";
-import MainImg from "../../assets/img/jennymain.jpeg";
+
 import Carrousel1 from "../../assets/img/carrousel1test.jpg";
 import Carrousel2 from "../../assets/img/carrousel2test.jpg";
 import logo1 from "../../assets/img/agfightlogo.jpg";
