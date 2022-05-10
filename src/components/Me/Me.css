@@ -12,7 +12,7 @@
 .aboutBanner{
     width: 100%;
     display: flex;
-    
+
 }
 .aboutTitle{
     color: #cea24e;
@@ -79,4 +79,13 @@
 .logoImage{
     width: 190px;
     
+}
+.galery{
+    
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.aboutList{
+    list-style: disc;
+    color: white;
 }

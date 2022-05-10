@@ -20,7 +20,7 @@
   width: 100%;
 }
 .interviewsTitle {
-  color: red;
+  color: #cd9e45;
   font-size: 2rem;
   margin-bottom: 50px;
   margin-top: 25px;
@@ -54,13 +54,13 @@
   gap: 5px;
 }
 .interviewLastname {
-  color: red;
+  color: #cea24e;
 }
 .interviewDate {
   font-size: 12px;
 }
 #figtherIcon {
-  color: red;
+  color: #cea24e;
   font-size: 1.5rem;
   /* text-align: justify; */
   display: flex;
@@ -70,7 +70,7 @@
 .interviewTitle{
   font-size: 2rem;
   text-align: center;
-  color: red;
+  color: #cea24e;
 }
 
 .box{
@@ -95,7 +95,7 @@
   transition: .2s ease;
 }
 #playIcon{
-  color: red;
+  color: #cea24e;
   font-size: 5rem;
 }
 .box:hover .capa{
