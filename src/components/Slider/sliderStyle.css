@@ -75,11 +75,8 @@
 @media (min-width: 1024px){
     
     .container-dots{
-        top: 110%;
+        top: 100%;
     }
-    .dot{
-        width: 10px;
-        height: 10px;
-    }
+    
 }  
 

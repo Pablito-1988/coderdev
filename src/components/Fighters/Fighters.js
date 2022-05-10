@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 import Loading from "../Loading/Loading";
+import Banner from "../Me/AboutBanner"
 
 const Fighters = () => {
   const { t } = useTranslation(["figthers"]);
@@ -70,7 +71,9 @@ const Fighters = () => {
    
 
   return (
-    <div className="fightersSeccion">
+    < div className="fightersSeccion">
+      <Banner/>
+    <div >
       <Link to={`/${t("peleadores")}`}><h1 className="fighterstitle">{t("peleadores")}</h1></Link>
       <div className="figthersWrapper">
         {page.map((fighter) => (
@@ -100,6 +103,8 @@ const Fighters = () => {
         ))}
       </div>
     </div>
+    </div>
+    
   );
 };
 

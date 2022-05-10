@@ -95,7 +95,8 @@
   }
 }
 a{ text-decoration: none;
-display: flex;}
+display: flex;
+justify-content: center;}
 
 .fighterDetailContainer{
   display: flex;

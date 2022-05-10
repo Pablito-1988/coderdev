@@ -6,6 +6,14 @@
     align-items: center;
     background-color: black;
 }
+.aboutBannerContainer{
+    width: 100%;
+}
+.aboutBanner{
+    width: 100%;
+    display: flex;
+    
+}
 .aboutTitle{
     color: #cea24e;
     text-align: center;

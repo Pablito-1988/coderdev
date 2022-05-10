@@ -1,4 +1,5 @@
 import "./Me.css";
+import AboutBanner from "./AboutBanner";
 import MainImg from "../../assets/img/jennymain.jpeg";
 import Carrousel1 from "../../assets/img/carrousel1test.jpg";
 import Carrousel2 from "../../assets/img/carrousel2test.jpg";
@@ -37,7 +38,8 @@ const Me = () => {
   return (
     <>
       <div className="aboutContainer">
-        <h1 className="aboutTitle">Conocé más acerca de mí</h1>
+        {/* <h1 className="aboutTitle">Conocé más acerca de mí</h1> */}
+        <AboutBanner />
         <div className="aboutInfo">
           <div className="meImage">
             <img src={abouteGalery[slideIndex]} alt="Jenny Main" className="aboutMainImage" />
