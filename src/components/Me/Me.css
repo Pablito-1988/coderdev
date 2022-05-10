@@ -17,21 +17,58 @@
     gap: 20px;
 
 }
+.meImage{
+    width: 50%;
+}
 .aboutMainImage{
     width: 100%;
+    margin-top: 24px;
+
 }
+.textAndSing{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
 .aboutText{
     color: white;
-    width: 50%;
     font-size: 1.5rem;
 
+}
+.firmaContainer{
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+}
+.firma
+{   
+    text-align: end;
+    width: 60%;
+    transform: rotate(-16deg);
 }
 .workResume{
     display: flex;
     width: 90%;
     justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 30px;
 }
 .workTitle{
     color: #cea24e;
     text-align: center;
+}
+.logos{
+    display: flex;
+    width: 90%;
+    justify-content: center;
+    align-items: center;
+    gap: 4%;
+    background-color: black;
+
+}
+.logoImage{
+    width: 190px;
+    
 }

@@ -3,6 +3,7 @@ import logoUfc from "../../assets/img/ufcLogo.JPG";
 import logoBellator from "../../assets/img/bellatorLogo.JPG";
 
 const Banner = () => {
+  
   const logos = [{ logoBanner: logoUfc }, { logoBanner:logoBellator }, {logoBanner: logoUfc }, {logoBanner: logoBellator }];
   return (
     <div className="bannerContainer">

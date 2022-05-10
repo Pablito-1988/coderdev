@@ -15,16 +15,17 @@ const Slider = () => {
   const [sliderTime, setSliderTime] = useState(5000);
   const moveDot = (index) => {
     setSlideIndex(index);
-    setSliderTime(5000)
+    setSliderTime(5000);
   };
 
   useEffect(() => {
     const interval = setInterval(() => {
-      slideIndex === images.length ? setSlideIndex(1) : setSlideIndex(slideIndex + 1);
+      slideIndex === images.length
+        ? setSlideIndex(1)
+        : setSlideIndex(slideIndex + 1);
     }, sliderTime);
     return () => clearInterval(interval);
   }, [slideIndex, sliderTime, images.length]);
-
 
   return (
     <>
@@ -38,8 +39,6 @@ const Slider = () => {
                   className={
                     slideIndex === index + 1 ? "slide active-anim" : "slide"
                   }
-                  /* auto={sliderAuto(index)} */
-                 
                 >
                   <img
                     src={image.slider}
@@ -51,21 +50,16 @@ const Slider = () => {
             })}
           </ul>
         </div>
-            <div className="container-dots">
-              {Array.from({ length: 3 }).map((item, index) => (
-                <div
-                    key={index}
-                  onClick={() => moveDot(index + 1)
-                   }
-                  className={slideIndex === index + 1 ? "dot active" : "dot"}
-
-                  
-                ></div>
-              ))}
-            </div>
+        <div className="container-dots">
+          {Array.from({ length: 3 }).map((item, index) => (
+            <div
+              key={index}
+              onClick={() => moveDot(index + 1)}
+              className={slideIndex === index + 1 ? "dot active" : "dot"}
+            ></div>
+          ))}
+        </div>
       </div>
-      
-      
     </>
   );
 };
