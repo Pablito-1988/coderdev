@@ -64,19 +64,22 @@
     70%{margin-left: -270%;}
     100%{margin-left: -270%;}
 }
-@media (max-width: 1919px) {
+@media (max-width: 768px) {
     .slider{
         height: 30%;
     }
     .container-dots {
         top: 200%;
+        display: none;
     }
 }
-@media (min-width: 1024px){
+@media (min-width: 769px){
     
     .container-dots{
         top: 100%;
+       
     }
+    
     
 }  
 
