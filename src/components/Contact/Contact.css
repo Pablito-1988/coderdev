@@ -119,9 +119,11 @@ opacity: 1;}
 @media (max-width:760px){
     .contactMain{
         flex-direction: column;
+        margin-top: -5px;
     }
    .formWrapper{
         width: 100%;
+        border-radius: 0;
     }
     .nameAndEmailContainer{
         flex-direction: column;

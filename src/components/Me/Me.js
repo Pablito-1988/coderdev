@@ -103,7 +103,7 @@ const Me = () => {
               </li>
             </ul>
             <p className="aboutText">
-              Administración y producción, asesoramiento , art media. Doblaje al
+              Administración y producción, asesoramiento, art media. Doblaje al
               español neutro. Español y portugués
             </p>
             <div className="firmaContainer">

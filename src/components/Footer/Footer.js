@@ -1,8 +1,9 @@
 import React from "react";
 import "./Footer.css";
 import logo from "../../assets/img/logoPng.png";
-import { Link } from "react-router-dom/cjs/react-router-dom.min";
+
 import { useTranslation } from "react-i18next";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   const {t} = useTranslation(["footer"]);
@@ -11,15 +12,17 @@ const Footer = () => {
       <div className="footerContainer">
         <div className="footer">
           <div className="footerLeft">
-            <img className="logoImg" src={logo} alt="" />
+            <Link to="/">
+               <img className="logoImg" src={logo} alt="" />
+            </Link>  
           </div>
           <div className="footerCenter">
             <h3 className="footerTitle">{t("contacto")}</h3>
             <ul className="iconContainer">
               <li className='linkIcon'>
-                <Link >
+                <a href = "mailto: jennypanichi@gmail.com" >
                   <i className="far fa-envelope"></i>
-                </Link>
+                </a>
               </li>
             </ul>
           </div>
@@ -27,14 +30,14 @@ const Footer = () => {
             <h3 className="footerTitle">{t("redes")}</h3>
             <ul className="iconContainer">
               <li className='linkIcon'>
-                <Link >
+                <a href="https://www.instagram.com/jennypanichi/" >
                   <i id="instagramIcon" className="fab fa-instagram"></i>
-                </Link>
+                </a>
               </li>
               <li className='linkIcon' >
-                <Link >
+                <a href="https://www.youtube.com/channel/UCIh8yp-Q12cA7fNkAjMQdBw" >
                   <i id="youtubeIcon" className="fab fa-youtube"></i>
-                </Link>
+                </a>
               </li>
             </ul>
           </div>
