@@ -55,7 +55,7 @@ i{
 }
 @media (max-width: 768px) {
     .logoImg{
-        width: 7.5rem;
+        width: 7rem;
     }
     .footerRight{
         display: flex;
