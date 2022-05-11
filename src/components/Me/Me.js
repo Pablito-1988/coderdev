@@ -117,7 +117,7 @@ const Me = () => {
             {logos.map((logo, index) => {
               return (
                 <a href={webs[index]} target="_blank" rel="noreferrer">
-                  <div className="logo" key={index}>
+                  <div className="logoContainer" key={index}>
                     <img src={logo} alt="logo" className="logoImage" />
                   </div>
                 </a>

@@ -6,7 +6,7 @@
     width: 100%;
     gap: 20px;
     justify-content: space-evenly;
-    margin-top: 10%;
+    margin-top: 5%;
     margin-bottom: 10%;
 }
 .formWrapper{
@@ -87,6 +87,15 @@ textarea{
     font-size: 1.5rem;
     margin:0;
 
+}
+.infoImgContainer{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+
+}
+.infoImg{
+    width: 60%;
 }
 .modalDisplay{
     font-size: 0px;

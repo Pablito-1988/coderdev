@@ -1,7 +1,6 @@
 import React from "react";
 import portada from "../Interviews/interview.png";
-
-import contactImg from "../../assets/img/contactImg.png";
+import contactImg1 from "../../assets/img/jennygalery3.jpeg";
 import "./Contact.css";
 import emailjs from "@emailjs/browser";
 import { useState, useEffect } from "react";
@@ -91,8 +90,8 @@ const Contact = () => {
               <p className="contactEmail">E-mail: Jennypanichi@gmail.com</p>
               
             </div>
-            <div >
-              <img className="infoImg" src={contactImg} alt="" />
+            <div  className="infoImgContainer">
+              <img className="infoImg" src={contactImg1} alt="" />
             </div>
           </div>
         </div>

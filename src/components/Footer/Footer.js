@@ -18,11 +18,6 @@ const Footer = () => {
             <ul className="iconContainer">
               <li className='linkIcon'>
                 <Link >
-                  <i className="fab fa-whatsapp"></i>
-                </Link>
-              </li>
-              <li className='linkIcon'>
-                <Link >
                   <i className="far fa-envelope"></i>
                 </Link>
               </li>
