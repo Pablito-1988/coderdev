@@ -53,3 +53,19 @@ i{
 .logoImg{
     width:10rem
 }
+@media (max-width: 768px) {
+    .logoImg{
+        width: 8rem;
+    }
+    .footerRight{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .footerCenter{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+    }
+}
