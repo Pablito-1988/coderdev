@@ -5,9 +5,12 @@ import i18next from "i18next";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import Loading from "../Loading/Loading";
+import { useLang } from "../../context/LangContext";
+
 
 const HomeInterviews = () => {
   const { t } = useTranslation(["figthers"]);
+  const { description } = useLang();
   const accessToken = "_8rkJ8PJK5FFmNgZI7aL5tShQCi9hETu4NOK7vkwtAw";
   const spaceId = "0ydrshsl7jeq";
   const query = `{
@@ -37,18 +40,14 @@ const HomeInterviews = () => {
   }`;
   ///* tituloEntrevista */
   const [page, setPage] = useState(null);
-  const [lang, setLanguage] = useState(i18next.language);
-  const [newLang, setNewLanguage] = useState(lang);
-  console.log(newLang)
-  console.log(setLanguage)
 
-  const description = (interview) => {
-    if (setNewLanguage === "pt") {
-      return interview.descripcionPt;
-    } else {
-      return interview.descripcionEntrevista;
-    }
-  };
+  // const description = (interview) => {
+  //   if (lang === "pt") {
+  //     return interview.descripcionPt;
+  //   } else {
+  //     return interview.descripcionEntrevista;
+  //   }
+  // };
 
   useEffect(() => {
     window

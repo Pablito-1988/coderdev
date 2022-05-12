@@ -2,13 +2,16 @@ import React from "react";
 import "../Dropdown/Dropdown.css";
 import "flag-icons";
 import { useTranslation } from "react-i18next";
-
+import { useLang } from "../../context/LangContext";
 
 const Dropdown = (props) => {
   const { i18n } = useTranslation("header");
+  const { langInicial,languageChange } = useLang();
 
   const handlerLanguageChange = (e) => {
     i18n.changeLanguage(e.target.value);
+    const lang = e.target.value;
+    languageChange(lang);
     props.closeMenu();
   };
 
@@ -18,6 +21,7 @@ const Dropdown = (props) => {
         <select
           className="dropdown"
           value={localStorage.getItem("i18nextLng")}
+          // onClick={() => languageChange(localStorage.getItem("i18nextLng"))}
           onChange={handlerLanguageChange}
         >
           Idioma

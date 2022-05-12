@@ -29,7 +29,6 @@ const Interviews = () => {
             url
             width
             height
-            
           }
         }
       }
