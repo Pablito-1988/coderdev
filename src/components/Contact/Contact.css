@@ -4,10 +4,11 @@
 .contactMain{
     display: flex;
     width: 100%;
-    gap: 20px;
+    gap: 40px;
     justify-content: space-evenly;
     margin-top: 5%;
     margin-bottom: 10%;
+    padding:0 2rem;
 }
 .formWrapper{
     display: flex;
@@ -91,7 +92,7 @@ textarea{
 .infoImgContainer{
     display: flex;
     width: 100%;
-    justify-content: center;
+    /* justify-content: center; */
 
 }
 .infoImg{
@@ -120,10 +121,14 @@ opacity: 1;}
     .contactMain{
         flex-direction: column;
         margin-top: -5px;
+        padding:0;
+        gap:20px;
     }
    .formWrapper{
         width: 100%;
         border-radius: 0;
+        border:0;
+        border-bottom: 1px solid #000000;
     }
     .nameAndEmailContainer{
         flex-direction: column;
