@@ -38,16 +38,7 @@ const HomeInterviews = () => {
       }
     }
   }`;
-  ///* tituloEntrevista */
   const [page, setPage] = useState(null);
-
-  // const description = (interview) => {
-  //   if (lang === "pt") {
-  //     return interview.descripcionPt;
-  //   } else {
-  //     return interview.descripcionEntrevista;
-  //   }
-  // };
 
   useEffect(() => {
     window

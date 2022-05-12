@@ -1,6 +1,4 @@
 import { createContext, useContext, useState } from "react";
-import i18next from "i18next";
-
 
 const LangContext = createContext();
 

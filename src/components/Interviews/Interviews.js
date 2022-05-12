@@ -1,7 +1,7 @@
 import React from 'react';
 import Interview from "./Interview";
 import { useState, useEffect } from "react";
-import i18next from "i18next";
+import { useLang } from "../../context/LangContext";
 import imagen from "./interview.png"
 import Loading from "../Loading/Loading";
 
@@ -35,22 +35,7 @@ const Interviews = () => {
     }`;
     ///* tituloEntrevista */
     const [page, setPage] = useState(null);
-    console.log(page)
-    const [lang, setLanguage] = useState(i18next.language);
-    const [newLang, setNewLanguage] = useState(lang);
-    console.log(setLanguage)
-    console.log(lang)
-    console.log(newLang)
-    
-
-    const description = (interview) => {
-      console.log("Soy el new language " + lang);
-      if (setNewLanguage === "es") {
-        return interview.descripcionEntrevista;
-      } else {
-        return interview.descripcionPt;
-      }
-    };
+    const { description } = useLang();
   
     useEffect(() => {
       window

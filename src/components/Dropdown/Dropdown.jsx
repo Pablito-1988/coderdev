@@ -21,7 +21,6 @@ const Dropdown = (props) => {
         <select
           className="dropdown"
           value={localStorage.getItem("i18nextLng")}
-          // onClick={() => languageChange(localStorage.getItem("i18nextLng"))}
           onChange={handlerLanguageChange}
         >
           Idioma
