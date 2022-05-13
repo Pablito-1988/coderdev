@@ -11,8 +11,10 @@ import logo6 from "../../assets/img/wknlogo.png";
 import Firma from "../../assets/img/firma.png";
 import colage from "../../assets/img/colage.jpg";
 import { useState, useEffect } from "react";
+import { useTranslation } from "react-i18next";
 
 const Me = () => {
+  const { t } = useTranslation(["about"]);
   const abouteGalery = [Carrousel1, Carrousel2];
   const logos = [logo1, logo2, logo3, logo4, logo5, logo6];
   const webs = [
@@ -35,7 +37,6 @@ const Me = () => {
   return (
     <>
       <div className="aboutContainer">
-        {/* <h1 className="aboutTitle">Conocé más acerca de mí</h1> */}
         <AboutBanner />
         <div className="aboutInfo">
           <div className="meImage">
@@ -47,64 +48,59 @@ const Me = () => {
           </div>
           <div className="textAndSing">
             <p className="aboutText">
-              Mi nombre es Jennifer Panichi, soy empresaria conductora y
-              reportera en eventos de artes marciales mixtas, soy la
-              representante de latinoamerica.
+            {t("intro")}
             </p>
             <p>
-              <u className="aboutText">Trabajos:</u>
+              <u className="aboutText">{t("trabajos")}</u>
             </p>
             <ul>
               <li className="aboutList">
                 <p className="aboutText">
-                  Reportera y corresponsal para Tudo Sobre MMA (Brasil) en UFC
-                  Argentina
+                {t("trabajo1")}
                 </p>
               </li>
               <li className="aboutList">
                 {" "}
                 <p className="aboutText">
-                  Reportera y Traductora en Taura MMA (Brasil)
+                {t("trabajo2")}
                 </p>{" "}
               </li>
               <li className="aboutList">
-                <p className="aboutText">Reportera CAM(Argentina) en canal 9</p>
+                <p className="aboutText">{t("trabajo3")}</p>
               </li>
               <li className="aboutList">
                 <p className="aboutText">
-                  Reportera y Corresponsal de MMA Premium (Brasil)
+                {t("trabajo4")}
                 </p>
               </li>
               <li className="aboutList">
                 <p className="aboutText">
-                  Reportera y comentarista en BJJ Combat (Argentina)
+                {t("trabajo5")}
                 </p>
               </li>
               <li className="aboutList">
                 <p className="aboutText">
-                  Comentarista en Estrella de Acero WKN
+                {t("trabajo6")}
                 </p>
               </li>
               <li className="aboutList">
                 <p className="aboutText">
-                  Reportera en el Main Event Championship
+                  {t("trabajo7")}
                 </p>{" "}
               </li>
               <li className="aboutList">
                 <p className="aboutText">
-                  Reportera y Corresponsal media day UFC y Bellator para AG
-                  Figth (Brasil)
+                {t("trabajo8")}
                 </p>
               </li>
               <li className="aboutList">
                 <p className="aboutText">
-                  Traductora para peleadores Brasileños al español
+                {t("trabajo9")}
                 </p>
               </li>
             </ul>
             <p className="aboutText">
-              Administración y producción, asesoramiento, art media. Doblaje al
-              español neutro. Español y portugués
+            {t("trabajo10")}
             </p>
             <div className="firmaContainer">
               <img src={Firma} alt="" className="firma" />
@@ -112,7 +108,7 @@ const Me = () => {
           </div>
         </div>
         <div className="workResume">
-          <h1 className="workTitle">Empresas con las que trabajé</h1>
+          <h1 className="workTitle">{t("empresas")}</h1>
           <div className="logos">
             {logos.map((logo, index) => {
               return (
