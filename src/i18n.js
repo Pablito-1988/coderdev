@@ -14,7 +14,7 @@ i18n
     },
     fallbackLng: "es",
     debug: true, //disable when in production
-    ns: ["header","footer","figthers","contact"],
+    ns: ["header","footer","figthers","contact","about"],
     // ns: ["header", "home", "about", "contact"],
     react: {
       wait: true,
