@@ -1,7 +1,6 @@
 import React from "react";
 import Interview from "./Interview";
 import { useState, useEffect } from "react";
-import i18next from "i18next";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import Loading from "../Loading/Loading";

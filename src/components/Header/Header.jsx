@@ -33,7 +33,7 @@ const Header = () => {
           <SearchBar placeholder="Buscar..." />
         </div>
         <div id="rightbox">
-          <Dropdown />
+          <Dropdown closeMenu={closeMobileMenu} />
         </div>
         <div className="mobile-menu-icon" onClick={handleClick}>
           <i className={click ? 'fas fa-times' : 'fas fa-bars'} />

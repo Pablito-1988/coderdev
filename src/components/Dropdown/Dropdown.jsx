@@ -6,7 +6,7 @@ import { useLang } from "../../context/LangContext";
 
 const Dropdown = (props) => {
   const { i18n } = useTranslation("header");
-  const { langInicial,languageChange } = useLang();
+  const { languageChange } = useLang();
 
   const handlerLanguageChange = (e) => {
     i18n.changeLanguage(e.target.value);
