@@ -8,6 +8,7 @@ import logo3 from "../../assets/img/maineventlogo.jpg";
 import logo4 from "../../assets/img/topkinglogo.png";
 import logo5 from "../../assets/img/tudosobremmalogo.jpg";
 import logo6 from "../../assets/img/wknlogo.png";
+import logo7 from "../../assets/img/taura.png";
 import Firma from "../../assets/img/firma.png";
 import colage from "../../assets/img/colage.jpg";
 import { useState, useEffect } from "react";
@@ -16,7 +17,7 @@ import { useTranslation } from "react-i18next";
 const Me = () => {
   const { t } = useTranslation(["about"]);
   const abouteGalery = [Carrousel1, Carrousel2];
-  const logos = [logo1, logo2, logo3, logo4, logo5, logo6];
+  const logos = [logo1, logo2, logo3, logo4, logo5, logo6, logo7];
   const webs = [
     "https://agfight.com",
     "https://mma-argentina.wixsite.com/inico",
