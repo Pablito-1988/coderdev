@@ -25,9 +25,11 @@ const Interview = (props) => {
       </div>
       <div className="figtherData">
        <div className="figtherName">
-         <Link to={`/peleador/${lastName}`}>
+         {lastName === 'Panichi' ? <Link to={`/about`}>
          <i id="figtherIcon" className="far fa-user-circle"></i>
-         </Link>
+         </Link> :<Link to={`/peleador/${lastName}`}>
+         <i id="figtherIcon" className="far fa-user-circle"></i>
+         </Link> }
           <p>{firstName}</p>
           <p className="interviewLastname">{lastName}</p>
         </div>
