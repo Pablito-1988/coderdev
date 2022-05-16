@@ -2,6 +2,7 @@ import "./Me.css";
 import AboutBanner from "./AboutBanner";
 import Carrousel1 from "../../assets/img/carrousel1test.jpg";
 import Carrousel2 from "../../assets/img/carrousel2test.jpg";
+import Carrousel3 from "../../assets/img/test1.jpg";
 import logo1 from "../../assets/img/agfightlogo.jpg";
 import logo2 from "../../assets/img/camlogo.png";
 import logo3 from "../../assets/img/maineventlogo.jpg";
@@ -16,7 +17,7 @@ import { useTranslation } from "react-i18next";
 
 const Me = () => {
   const { t } = useTranslation(["about"]);
-  const abouteGalery = [Carrousel1, Carrousel2];
+  const abouteGalery = [Carrousel1, Carrousel2, Carrousel3];
   const logos = [logo1, logo2, logo3, logo4, logo5, logo6, logo7];
   const webs = [
     "https://agfight.com",
@@ -30,7 +31,7 @@ const Me = () => {
   const sliderTime = 5000;
   useEffect(() => {
     const interval = setInterval(() => {
-      slideIndex === 1 ? setSlideIndex(0) : setSlideIndex(slideIndex + 1);
+      slideIndex === 2 ? setSlideIndex(0) : setSlideIndex(slideIndex + 1);
     }, sliderTime);
     return () => clearInterval(interval);
   }, [slideIndex, sliderTime, abouteGalery.length]);
