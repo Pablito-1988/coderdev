@@ -30,12 +30,12 @@ const Footer = () => {
             <h3 className="footerTitle">{t("redes")}</h3>
             <ul className="iconContainer">
               <li className='linkIcon'>
-                <a href="https://www.instagram.com/jennypanichi/" >
+                <a href="https://www.instagram.com/jennypanichi/" target="_blank" rel="noreferrer" >
                   <i id="instagramIcon" className="fab fa-instagram"></i>
                 </a>
               </li>
               <li className='linkIcon' >
-                <a href="https://www.youtube.com/channel/UCIh8yp-Q12cA7fNkAjMQdBw" >
+                <a href="https://www.youtube.com/channel/UCIh8yp-Q12cA7fNkAjMQdBw" target="_blank" rel="noreferrer">
                   <i id="youtubeIcon" className="fab fa-youtube"></i>
                 </a>
               </li>
